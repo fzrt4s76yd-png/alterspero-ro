@@ -31,7 +31,6 @@ def fetch_news_items(max_items=10):
     keywords = ["arta", "artist", "expozit", "muzeu", "cultura",
                 "pictura", "sculptura", "teatru", "film", "muzica",
                 "brancusi", "galerie", "festiv", "premiu", "concert"]
-
     for feed_url in RSS_FEEDS:
         try:
             feed = feedparser.parse(feed_url)
@@ -55,21 +54,18 @@ def fetch_news_items(max_items=10):
                 if len(items) >= max_items:
                     return items
         except Exception as e:
-            print(f"[WARN] Feed {feed_url} esuat: {e}")
+            print(f"[WARN] Feed esuat: {e}")
     return items
 
 
 def generate_article_with_claude(news_items):
     if not news_items:
         return None
-
     client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-
     news_context = "\n\n".join([
-        f"STIRE {i+1}:\nTitlu: {item['title']}\nSursa: {item['source']}\nRezumat: {item['summary']}\nLink: {item['link']}"
+        f"STIRE {i+1}:\nTitlu: {item['title']}\nSursa: {item['source']}\nRezumat: {item['summary']}"
         for i, item in enumerate(news_items[:5])
     ])
-
     prompt = f"""Esti redactorul cultural al asociatiei Alter Spero din Bucuresti.
 
 Stiri recente despre arta si cultura din Romania:
@@ -77,19 +73,12 @@ Stiri recente despre arta si cultura din Romania:
 {news_context}
 
 Scrie un articol de blog pentru sectiunea Jurnal cultural de pe alterspero.ro.
-Alege cel mai interesant subiect. Scrie in romana, ton cald, ~400 cuvinte.
+Alege cel mai interesant subiect. Scrie in romana, ton cald, aproximativ 400 de cuvinte.
+Foloseste doar ghilimele duble simple, fara apostrofuri speciale sau caractere Unicode.
 
-Raspunde EXCLUSIV in format JSON valid, fara markdown, fara text inainte sau dupa:
+Raspunde DOAR cu un obiect JSON valid, fara text inainte sau dupa, fara markdown:
 
-{{
-  "titlu": "titlul articolului (max 80 caractere)",
-  "categorie": "Articole",
-  "rezumat": "2 fraze introductive (max 200 caractere)",
-  "continut": "textul complet cu paragrafe HTML simple folosind doar taguri p si strong",
-  "durata_citire": 4,
-  "link_sursa": "URL-ul stirii sursa",
-  "slug": "titlu-cu-cratime-fara-diacritice"
-}}"""
+{{"titlu": "titlul articolului max 80 caractere", "categorie": "Articole", "rezumat": "2 fraze scurte max 150 caractere", "continut": "textul articolului doar cu taguri p si strong", "durata_citire": 4, "link_sursa": "", "slug": "titlu-cu-cratime-fara-diacritice"}}"""
 
     try:
         message = client.messages.create(
@@ -100,35 +89,16 @@ Raspunde EXCLUSIV in format JSON valid, fara markdown, fara text inainte sau dup
         raw = message.content[0].text.strip()
         raw = re.sub(r'^```json\s*', '', raw)
         raw = re.sub(r'\s*```$', '', raw)
-        raw = raw.replace('\n', ' ').replace('\r', ' ')
+        start = raw.find('{')
+        end = raw.rfind('}') + 1
+        if start >= 0 and end > start:
+            raw = raw[start:end]
         article = json.loads(raw)
-        for key in ['titlu', 'rezumat', 'continut', 'slug']:
-            if key in article:
-                article[key] = str(article[key])
         return article
-    except json.JSONDecodeError as e:
-        print(f"[ERROR] JSON invalid: {e}")
-        print(f"Raw: {raw[:300]}")
-        try:
-            titlu = re.search(r'"titlu"\s*:\s*"([^"]+)"', raw)
-            rezumat = re.search(r'"rezumat"\s*:\s*"([^"]+)"', raw)
-            slug = re.search(r'"slug"\s*:\s*"([^"]+)"', raw)
-            if titlu and rezumat and slug:
-                return {
-                    "titlu": titlu.group(1),
-                    "categorie": "Articole",
-                    "rezumat": rezumat.group(1),
-                    "continut": rezumat.group(1),
-                    "durata_citire": 4,
-                    "link_sursa": "",
-                    "slug": slug.group(1)
-                }
-        except Exception:
-            pass
-        return None
     except Exception as e:
         print(f"[ERROR] Claude API: {e}")
-        return None
+        return None
+
 
 def build_article_html(article, image_url):
     now = datetime.datetime.now()
@@ -143,15 +113,13 @@ def build_article_html(article, image_url):
     titlu = article.get("titlu", "")
     rezumat = article.get("rezumat", "")
     continut = article.get("continut", "")
-    link_sursa = article.get("link_sursa", "#")
-
+    link_sursa = article.get("link_sursa", "")
     sursa_html = ""
-    if link_sursa and link_sursa != "#":
+    if link_sursa:
         sursa_html = f'<p><em>Sursa: <a href="{link_sursa}" target="_blank" rel="noopener">articol original</a></em></p>'
-
     return f"""
-                <div class="journal-card">
-                    <img src="{image_url}" alt="{titlu}" style="width:100%;height:200px;object-fit:cover;border-radius:8px 8px 0 0;">
+                <div class="journal-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.07);margin-bottom:2rem;">
+                    <img src="{image_url}" alt="{titlu}" style="width:100%;height:200px;object-fit:cover;display:block;">
                     <div style="padding:1.25rem 1.5rem 1.5rem;">
                         <div style="font-size:.78rem;color:#888;margin-bottom:.6rem;">{categorie} &nbsp;·&nbsp; {date_str} &nbsp;·&nbsp; {durata} min citire</div>
                         <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;">{titlu}</h3>
@@ -174,33 +142,17 @@ def inject_article_into_html(index_path, new_article_html):
     except FileNotFoundError:
         print(f"[ERROR] Nu gasesc {index_path}")
         return False
-
     marker_start = "<!-- JURNAL-ARTICLES-START -->"
     marker_end = "<!-- JURNAL-ARTICLES-END -->"
-
     if marker_start not in content or marker_end not in content:
         print("[ERROR] Markerii JURNAL nu exista in index.html.")
         return False
-
     before = content.split(marker_start)[0]
     existing_block = content.split(marker_start)[1].split(marker_end)[0]
     after = content.split(marker_end)[1]
-
-    existing_count = existing_block.count('<div class="journal-card">')
-    if existing_count >= 5:
-        last_idx = existing_block.rfind('<div class="journal-card">')
-        existing_block = existing_block[:last_idx]
-
-    new_content = (
-        before + marker_start
-        + "\n" + new_article_html
-        + existing_block
-        + marker_end + after
-    )
-
+    new_content = before + marker_start + "\n" + new_article_html + "\n" + existing_block + marker_end + after
     with open(index_path, "w", encoding="utf-8") as f:
         f.write(new_content)
-
     print(f"[OK] Articol injectat in {index_path}")
     return True
 
@@ -227,33 +179,26 @@ def main():
     print("=" * 50)
     print(f"AlterSpero Content Bot — {datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 50)
-
     index_path = os.environ.get("SITE_INDEX_PATH", "index.html")
-
     print("\n[1/4] Colectare stiri RSS...")
     news_items = fetch_news_items(max_items=10)
     print(f"      -> {len(news_items)} stiri gasite")
-
     if not news_items:
         print("[ABORT] Nicio stire relevanta.")
         return
-
     print("\n[2/4] Generare articol cu Claude...")
     article = generate_article_with_claude(news_items)
     if not article:
         print("[ABORT] Generarea a esuat.")
         return
     print(f"      -> \"{article.get('titlu', 'N/A')}\"")
-
     print("\n[3/4] Construire HTML...")
     image_url = random.choice(UNSPLASH_IMAGES)
     article_html = build_article_html(article, image_url)
-
     print("\n[4/4] Injectare in site...")
     success = inject_article_into_html(index_path, article_html)
     if not success:
         return
-
     save_article_log(article)
     print(f"\n✓ Publicat: {article.get('titlu')}")
     print("=" * 50)
