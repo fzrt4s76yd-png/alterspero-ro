@@ -1,4 +1,4 @@
-name: Weekly Content Generator
+yamlname: Weekly Content Generator
 
 on:
   schedule:
@@ -14,6 +14,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
@@ -34,6 +36,7 @@ jobs:
         run: |
           git config user.name "AlterSpero Bot"
           git config user.email "bot@alterspero.ro"
-          git add index.html sitemap.xml scripts/articles_log.json || true
-          git diff --staged --quiet || git commit -m "articol saptamanal $(date '+%Y-%m-%d')"
-          git push
+          git add -A
+          git status
+          git commit -m "articol saptamanal $(date '+%Y-%m-%d')" || echo "Nimic de commit"
+          git push origin main
