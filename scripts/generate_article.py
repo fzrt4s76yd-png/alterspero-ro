@@ -100,11 +100,35 @@ Raspunde EXCLUSIV in format JSON valid, fara markdown, fara text inainte sau dup
         raw = message.content[0].text.strip()
         raw = re.sub(r'^```json\s*', '', raw)
         raw = re.sub(r'\s*```$', '', raw)
-        return json.loads(raw)
+        raw = raw.replace('\n', ' ').replace('\r', ' ')
+        article = json.loads(raw)
+        for key in ['titlu', 'rezumat', 'continut', 'slug']:
+            if key in article:
+                article[key] = str(article[key])
+        return article
+    except json.JSONDecodeError as e:
+        print(f"[ERROR] JSON invalid: {e}")
+        print(f"Raw: {raw[:300]}")
+        try:
+            titlu = re.search(r'"titlu"\s*:\s*"([^"]+)"', raw)
+            rezumat = re.search(r'"rezumat"\s*:\s*"([^"]+)"', raw)
+            slug = re.search(r'"slug"\s*:\s*"([^"]+)"', raw)
+            if titlu and rezumat and slug:
+                return {
+                    "titlu": titlu.group(1),
+                    "categorie": "Articole",
+                    "rezumat": rezumat.group(1),
+                    "continut": rezumat.group(1),
+                    "durata_citire": 4,
+                    "link_sursa": "",
+                    "slug": slug.group(1)
+                }
+        except Exception:
+            pass
+        return None
     except Exception as e:
         print(f"[ERROR] Claude API: {e}")
-        return None
-
+        return None
 
 def build_article_html(article, image_url):
     now = datetime.datetime.now()
