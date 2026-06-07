@@ -4,15 +4,6 @@ on:
   schedule:
     - cron: "0 6 * * 1"
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: "Dry run (nu face commit)"
-        required: false
-        default: "false"
-        type: choice
-        options:
-          - "true"
-          - "false"
 
 jobs:
   generate-and-publish:
@@ -23,48 +14,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
 
       - name: Setup Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-          cache: "pip"
 
       - name: Install dependencies
-        run: |
-          pip install anthropic feedparser requests beautifulsoup4
+        run: pip install anthropic feedparser requests beautifulsoup4
 
       - name: Generate and inject article
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           SITE_INDEX_PATH: index.html
           SITE_SITEMAP_PATH: sitemap.xml
-        run: |
-          python scripts/generate_article.py
+        run: python scripts/generate_article.py
 
-      - name: Check for changes
-        id: check_changes
-        run: |
-          if git diff --quiet; then
-            echo "changed=false" >> $GITHUB_OUTPUT
-          else
-            echo "changed=true" >> $GITHUB_OUTPUT
-          fi
-
-      - name: Commit and push updated site
-        if: steps.check_changes.outputs.changed == 'true' && github.event.inputs.dry_run != 'true'
+      - name: Commit and push
         run: |
           git config user.name "AlterSpero Bot"
           git config user.email "bot@alterspero.ro"
           git add index.html sitemap.xml scripts/articles_log.json || true
-          git commit -m "chore: articol saptamanal jurnal cultural $(date '+%Y-%m-%d')"
+          git diff --staged --quiet || git commit -m "articol saptamanal $(date '+%Y-%m-%d')"
           git push
-
-      - name: Summary
-        if: always()
-        run: |
-          echo "### AlterSpero Content Bot" >> $GITHUB_STEP_SUMMARY
-          echo "- **Data**: $(date '+%d %B %Y, %H:%M')" >> $GITHUB_STEP_SUMMARY
-Apoi apasă Commit changes → Commit directly to main → Commit changes.Sonnet 4.6 Low
