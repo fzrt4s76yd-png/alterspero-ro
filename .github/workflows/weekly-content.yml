@@ -1,4 +1,4 @@
-yamlname: Weekly Content Generator
+name: Weekly Content Generator
 
 on:
   schedule:
