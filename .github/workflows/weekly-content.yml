@@ -36,10 +36,8 @@ jobs:
         run: |
           git config user.name "AlterSpero Bot"
           git config user.email "bot@alterspero.ro"
-          git add -A
-          git stash
-          git pull origin main --rebase
-          git stash pop
-          git add -A
+          git fetch origin main
+          git reset --soft origin/main
+          git add index.html scripts/articles_log.json
           git commit -m "articol saptamanal $(date '+%Y-%m-%d')" || echo "Nimic de commit"
           git push origin main
