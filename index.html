@@ -1,217 +1,1495 @@
-ALTERSPERO
-	•	Cine suntem
-	•	Misiune
-	•	Direcții
-	•	Inițiative
-	•	Susține
-	•	Jurnal
-	•	Contact
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alter Spero este o asociație culturală dedicată susținerii tinerilor artiști și proiectelor cu impact social în București.">
+  <meta property="og:title" content="Alter Spero — Cultură. Comunitate. Impact.">
+  <meta property="og:description" content="Susținem tinerii artiști și proiectele culturale care transformă creativitatea în impact social.">
+  <meta property="og:type" content="website">
+  <title>Alter Spero — Cultură. Comunitate. Impact.</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-ASOCIAȚIE CULTURALĂ · BUCUREȘTI
-ALTER SPERO
-„Cultura și maturitatea unei comunități se vede în felul în care își sprijină artiștii înainte de a deveni celebri."
-	•	Credem într-o cultură accesibilă, vie și conectată la comunitate.
-	•	Credem în artiștii care creează înainte de validare, înainte de succes și înainte de aplauze.
-	•	Credem că arta poate deveni spațiu de dialog, reflecție și apropiere între oameni.
-Descoperă Alter Spero Susține un proiect
+<style>
+/* ============================================================
+   ALTER SPERO — style.css
+   ============================================================ */
 
-01
-Cine este Alter Spero
+:root {
+  --bg:        #080808;
+  --bg2:       #0e0e0e;
+  --card:      #131313;
+  --card-h:    #1a1a1a;
+  --gold:      #C8A951;
+  --gold-lt:   #E2C97E;
+  --gold-dk:   #9A7A2E;
+  --fg:        #F0EBE3;
+  --fg2:       #9A9282;
+  --fg3:       #565050;
+  --bdr:       #1e1e1e;
+  --bdr2:      #2a2a2a;
+  --r:         4px;
+  --r2:        8px;
+  --ease:      0.3s ease;
+  --sh:        0 4px 28px rgba(0,0,0,.45);
+  --sh2:       0 8px 48px rgba(0,0,0,.65);
+}
 
-Asociația Alter Spero a luat naștere din inițiativa unui grup de oameni motivați de dorința de a contribui activ la dezvoltarea unei societăți mai echilibrate, mai empatice și mai deschise către valorile autentice ale solidarității și responsabilității sociale.
-Timp de peste 12 ani, membrii echipei s-au implicat constant în sprijinirea persoanelor aflate în situații vulnerabile, prin acțiuni sociale și inițiative dedicate comunității. Experiența acumulată ne-a arătat că schimbările reale apar atunci când oamenii sunt susținuți nu doar material, ci și uman, emoțional și cultural.
-Astăzi, Alter Spero își propune să dezvolte proiecte culturale și artistice cu impact social, dedicate în special tinerilor creatori aflați la început de drum. Credem că arta are puterea de a conecta oameni, de a inspira dialog și de a transforma comunități.
-12+
-ANI DE IMPLICARE SOCIALĂ
-4
-DIRECȚII CULTURALE
-BUC
-BUCUREȘTI & NAȚIONAL
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.75;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+img { max-width: 100%; display: block; }
+a  { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+address { font-style: normal; }
 
-Comunitate. Artă. Impact.
-02
-Ce ne propunem
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 
+h1,h2,h3,h4 { font-family: 'Playfair Display', serif; line-height: 1.2; }
 
-Misiunea noastră
-Credem că arta poate deveni un spațiu autentic de întâlnire între oameni, idei și comunități. Susținem inițiative culturale și tineri artiști care transformă creativitatea în impact social, construind o comunitate în care talentul poate crește liber.
+.section-num {
+  display: block;
+  font-family: 'Inter', sans-serif;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .6rem;
+}
 
-Viziunea noastră
-Ne dorim o societate în care arta și cultura devin accesibile tuturor și reprezintă instrumente reale de dialog, educație și coeziune socială. Un București în care tinerii artiști au spațiu să creeze, să experimenteze și să fie susținuți înainte ca succesul lor să devină vizibil.
+.section-title {
+  font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--fg);
+}
+.section-title em { font-style: italic; color: var(--gold); }
 
-Valorile noastre
-Solidaritate
-Creativitate
-Incluziune
-Responsabilitate socială
-Colaborări artistice
-Diversitate culturală
-03
-Direcții culturale
-Ce ne propunem să construim împreună
+.section-sub {
+  margin-top: .5rem;
+  color: var(--fg2);
+  font-size: 1rem;
+}
 
+.section-intro {
+  max-width: 580px;
+  margin: 1rem auto 0;
+  color: var(--fg2);
+  font-size: .95rem;
+  line-height: 1.75;
+}
 
+.divider {
+  width: 52px;
+  height: 2px;
+  background: var(--gold);
+  margin: 1.4rem 0 2.5rem;
+}
+.divider--center { margin-left: auto; margin-right: auto; }
+.divider--gold   { background: var(--gold); }
 
-Susținerea tinerilor artiști
-Sprijinirea artiștilor emergenți prin promovare, mentorat și facilitarea accesului la spații și oportunități culturale.
-„Cultura are nevoie de susținere, nu doar de aplauze."
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  padding: .85rem 1.9rem;
+  border-radius: var(--r);
+  font-family: 'Inter', sans-serif;
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .04em;
+  cursor: pointer;
+  border: none;
+  transition: all var(--ease);
+}
+.btn-primary  { background: var(--gold); color: #080808; }
+.btn-primary:hover { background: var(--gold-lt); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(200,169,81,.35); }
+.btn-outline  { background: transparent; color: var(--fg); border: 1px solid var(--bdr2); }
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+.btn-sm       { padding: .55rem 1.25rem; font-size: .82rem; }
+.btn-full     { width: 100%; justify-content: center; }
 
+.btn-outline-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .5rem 1.15rem;
+  border: 1px solid rgba(200,169,81,.35);
+  border-radius: var(--r);
+  font-size: .82rem;
+  font-weight: 500;
+  color: var(--gold-lt);
+  transition: all var(--ease);
+  background: transparent;
+}
+.btn-outline-sm:hover { border-color: var(--gold); background: rgba(200,169,81,.07); transform: translateY(-1px); }
 
-Proiecte cu impact social
-Organizarea de evenimente, expoziții, concerte și inițiative artistice care încurajează dialogul social și implicarea comunității.
-„Arta chiar are puterea de a schimba comunități."
+.btn-gold-sm {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .5rem 1.15rem;
+  background: var(--gold);
+  color: #080808;
+  border-radius: var(--r);
+  font-size: .82rem;
+  font-weight: 600;
+  transition: all var(--ease);
+  border: none;
+}
+.btn-gold-sm:hover { background: var(--gold-lt); transform: translateY(-1px); box-shadow: 0 4px 16px rgba(200,169,81,.4); }
 
+#navbar {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 999;
+  padding: 1.4rem 0;
+  transition: padding var(--ease), background var(--ease), border-color var(--ease);
+  border-bottom: 1px solid transparent;
+}
+#navbar.scrolled {
+  background: rgba(8,8,8,.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  padding: .9rem 0;
+  border-bottom-color: var(--bdr);
+}
 
-Educație prin artă
-Dezvoltarea de activități educaționale și creative pentru copii și tineri, astfel încât creativitatea să întâlnească comunitatea.
-„Creativitate întâlnește comunitate."
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+.logo-main { color: var(--fg); }
+.logo-gold { color: var(--gold); }
 
-Colaborări interdisciplinare
-Crearea de parteneriate între artiști, organizații culturale și comunități locale pentru proiecte transformatoare.
-„Împreună creăm mai mult."
-04
-Inițiative viitoare
-Proiecte în pregătire
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+.nav-links a {
+  font-size: .83rem;
+  font-weight: 400;
+  letter-spacing: .04em;
+  color: var(--fg2);
+  transition: color var(--ease);
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transition: width var(--ease);
+}
+.nav-links a:hover, .nav-links a.active { color: var(--fg); }
+.nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 
+.nav-cta {
+  background: var(--gold) !important;
+  color: #080808 !important;
+  padding: .45rem 1.1rem;
+  border-radius: var(--r);
+  font-weight: 600 !important;
+}
+.nav-cta::after { display: none !important; }
+.nav-cta:hover { background: var(--gold-lt) !important; }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1001;
+}
+.hamburger span {
+  display: block;
+  width: 22px; height: 2px;
+  background: var(--fg);
+  transition: all var(--ease);
+  transform-origin: center;
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-Seri de muzică live
-Seri dedicate artiștilor independenți, într-un spațiu care pune muzica pe primul loc.
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 680px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url('https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center 30%;
+  will-change: transform;
+}
 
-Expoziții colective
-Expoziții pentru tineri pictori și sculptori — un prim spațiu de vizibilitate reală.
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,8,8,.72) 0%,
+    rgba(8,8,8,.52) 45%,
+    rgba(8,8,8,.88) 100%
+  );
+}
 
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+  padding: 0 2rem;
+}
 
-Ateliere creative
-Ateliere pentru copii și adolescenți care vor să descopere lumea artei.
+.hero-eyebrow {
+  font-size: .72rem;
+  letter-spacing: .42em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.1rem;
+  opacity: 0;
+  animation: fadeUp .7s .15s forwards;
+}
 
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4.5rem, 11vw, 9rem);
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--fg);
+  line-height: 1;
+  margin-bottom: 1.75rem;
+  opacity: 0;
+  animation: fadeUp .7s .35s forwards;
+}
 
-Evenimente în spații alternative
-Cultură în spații neconvenționale din București — arta nu are nevoie de frontiere.
+.hero-quote {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: clamp(.95rem, 1.8vw, 1.2rem);
+  color: var(--gold-lt);
+  max-width: 680px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.65;
+  border: none;
+  opacity: 0;
+  animation: fadeUp .7s .55s forwards;
+}
 
+.hero-beliefs {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin-bottom: 2.25rem;
+  opacity: 0;
+  animation: fadeUp .7s .75s forwards;
+}
+.hero-beliefs li {
+  font-size: .875rem;
+  color: rgba(240,235,227,.62);
+  letter-spacing: .01em;
+}
 
-Campanii de artă urbană
-Mesaje sociale prin artă stradală — transformând spațiul public în galerie comunitară.
+.hero-actions {
+  display: flex;
+  gap: .9rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0;
+  animation: fadeUp .7s .95s forwards;
+}
 
+.scroll-hint {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--gold);
+  font-size: 1.1rem;
+  z-index: 2;
+  animation: bounce 2.2s infinite;
+}
 
-Rezidențe artistice
-Spații de creație și colaborare interdisciplinară pentru artiști din toate domeniile.
-05
-Susțineți și voi inițiativele noastre
+.section      { padding: 5.5rem 0; }
+.section-dark { background: var(--bg2); }
 
-Proiectele culturale independente au nevoie nu doar de vizibilitate, ci și de susținere reală pentru a putea crește. Prin contribuția ta, putem dezvolta inițiative dedicate tinerilor artiști și proiecte creative cu impact social.
+.section-warm {
+  background: radial-gradient(ellipse at 60% 0%, #100d00 0%, var(--bg) 65%);
+  position: relative;
+}
+.section-warm::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23C8A951' fill-opacity='0.025'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6z'/%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
 
-Devino voluntar
-Alătură-te echipei și contribuie cu timpul și energia ta la proiectele noastre culturale.
-Vreau să mă implic
+.section-header { margin-bottom: 2.5rem; }
+.section-header--center { text-align: center; }
 
-Susține un proiect
-Finanțează direct un proiect cultural și ajută un tânăr artist să-și realizeze visul.
-Alege un proiect
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.5rem;
+  align-items: center;
+}
 
-Devino partener
-Organizații, companii și instituții care împărtășesc valorile noastre sunt binevenite.
-Hai să colaborăm
+.about-text p {
+  color: var(--fg2);
+  font-size: .96rem;
+  line-height: 1.82;
+  margin-bottom: 1.15rem;
+}
 
-Donează
-Orice contribuție, oricât de mică, ajută la construirea unui spațiu cultural mai bun.
-Donează acum
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.25rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--bdr2);
+}
 
-Propune o colaborare
-Ai un proiect artistic? Vrei să colaborezi? Suntem deschiși la orice idee creativă.
-Propune ideea ta
-06
-Jurnal cultural
+.stat-num {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: .4rem;
+}
+.stat-lbl {
+  font-size: .72rem;
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  color: var(--fg3);
+}
 
-Articole
-Reflecții
-Interviuri
-Recomandări
-Perspective
+.about-image { position: relative; }
+.about-image img {
+  width: 100%;
+  height: 510px;
+  object-fit: cover;
+  border-radius: var(--r2);
+}
+.img-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(8,8,8,.88) 0%, transparent 100%);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: .9rem;
+  color: var(--gold-lt);
+  border-radius: 0 0 var(--r2) var(--r2);
+  text-align: center;
+}
 
-Articole  ·  Iunie 2026  ·  4 min citire
-Jucarii din Antichitate: copilaria la malul Marii Negre
-Arheologii au scos la lumina jucarii romane din vechea cetate Tomis. O expozitie itineranta le aduce acum mai aproape de noi.
-Citeste integral
-Exista ceva profund emotionant in ideea ca, acum doua mii de ani, un copil se juca pe strazile cetatii Tomis cu un calusel pe rotite. Acelasi zambet, aceeasi bucurie, aceeasi nevoie de joaca pe care o recunoastem si astazi in ochii copiilor nostri.
-Zornaitoare, figurine de animale, soldatei si calusei pe rotite - acestea sunt jucarii pastrate cu grija in incinta Muzeului National de Istorie si Arheologie Constanta. Nu sunt monumente impunatoare, nu sunt comori de aur sau inscriptii grandioase. Sunt obiecte mici, fragile, facute pentru maini mici.
-Aceste obiecte vor pleca acum intr-un turneu itinerant prin tara, iar prima oprire va fi la Iasi, incepand din 19 iunie. Este o ocazie rara si valoroasa, mai ales pentru cei mici de astazi, care pot vedea astfel ca joaca este un limbaj universal.
-Sursa: articol original
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
 
-Articole  ·  Iunie 2026  ·  4 min citire
-Ia romaneasca, intre traditie si arta: o expozitie de neuitat la MNAR
-Muzeul National de Arta al Romaniei gazduieste cea mai spectaculoasa expozitie dedicata iei romanesti. O invitatie la redescoperirea identitatii noastre culturale.
-Citeste integral
-Ia nu este doar o camasa. Este un document viu, tesut cu rabdare si dragoste de-a lungul generatiilor. Fiecare motiv brodat poarta o poveste, un sat, o familie, o credinta. Iar aceasta expozitie reuseste ceva rar: sa transforme un obiect familiar intr-o experienta profunda.
-La Alter Spero credem ca tocmai astfel de initiative construiesc puntile dintre trecut si prezent, dintre comunitate si individ. Arta populara romaneasca nu este un muzeu al trecutului, ci o sursa vie de inspiratie pentru cei care vor sa inteleaga cine sunt si de unde vin.
+.mvv-card {
+  background: var(--card);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r2);
+  padding: 2.25rem 1.85rem;
+  transition: all var(--ease);
+}
+.mvv-card:hover {
+  border-color: var(--bdr2);
+  transform: translateY(-4px);
+  box-shadow: var(--sh);
+}
+.mvv-card--accent {
+  border-color: var(--gold-dk);
+  background: linear-gradient(150deg, #111000 0%, var(--card) 100%);
+}
 
-Articole  ·  Iunie 2026  ·  4 min citire
-Mastile africane povestesc la Cluj: o calatorie intre doua lumi
-Muzeul Etnografic al Transilvaniei gazduieste cea mai mare colectie de masti africane din Romania. O expozitie care merita vazuta.
-Citeste integral
-Mastile nu sunt simple obiecte decorative. In culturile africane, ele reprezinta punti intre lumea celor vii si cea a stramosilor, instrumente rituale incarcate de sens, de rugaciune si de memorie colectiva.
-Cultura nu are granite. Uneori are nevoie doar de un muzeu curajos si de o sala bine iluminata ca sa ne aminteasca asta.
+.mvv-icon {
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  background: rgba(200,169,81,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.15rem;
+  margin-bottom: 1.35rem;
+}
 
-Articole  ·  Iunie 2026  ·  4 min citire
-Artistul roman din umbra Game of Thrones, recompensat cu un premiu Emmy
-Un artist roman a contribuit la universul Game of Thrones si a fost recompensat cu un premiu Emmy. O poveste despre talent si recunoastere internationala.
-Citeste integral
-Exista oameni care construiesc lumi intregi fara ca numele lor sa apara pe afis. Oameni care lucreaza in spatele camerei si al caror talent ajunge sa fie vazut de sute de milioane de oameni fara ca ei sa fie recunoscuti pe strada.
-Un premiu Emmy nu este o intamplare. Este rezultatul unor ani de dedicare, al unor nopti petrecute in ateliere si studiouri. La Alter Spero credem ca astfel de povesti merita spuse si auzite — pot deveni surse de inspiratie pentru tinerii artisti din Romania.
-07
-Contact
+.mvv-card h3 { font-size: 1.2rem; margin-bottom: .85rem; }
+.mvv-card p  { color: var(--fg2); font-size: .92rem; line-height: 1.78; }
 
-Hai să construim ceva împreună
-Fie că vrei să te implici ca voluntar, să propui o colaborare artistică sau pur și simplu să afli mai multe despre proiectele noastre — suntem bucuroși să te ascultăm.
+.values-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  margin-top: .5rem;
+}
+.values-tags span {
+  background: rgba(200,169,81,.09);
+  border: 1px solid rgba(200,169,81,.2);
+  color: var(--gold-lt);
+  padding: .3rem .82rem;
+  border-radius: 100px;
+  font-size: .77rem;
+  font-weight: 500;
+}
 
-contact@alterspero.ro
+.dir-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
 
-+40 731 045 667
+.dir-card {
+  background: var(--card);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r2);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--ease);
+}
+.dir-card:hover {
+  border-color: var(--bdr2);
+  transform: translateY(-4px);
+  box-shadow: var(--sh2);
+}
 
-București, România
+.dir-img { height: 210px; overflow: hidden; }
+.dir-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .55s ease;
+}
+.dir-card:hover .dir-img img { transform: scale(1.06); }
 
+.dir-body {
+  padding: 1.75rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.dir-icon { color: var(--gold); font-size: 1.4rem; margin-bottom: .85rem; }
+.dir-body h3 { font-size: 1.2rem; margin-bottom: .65rem; }
+.dir-body p  { color: var(--fg2); font-size: .92rem; flex: 1; }
+.dir-body blockquote {
+  margin-top: 1.1rem;
+  padding-left: .9rem;
+  border-left: 2px solid var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: .875rem;
+  color: var(--gold-lt);
+}
 
+.init-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+}
 
+.init-card {
+  background: var(--card);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r2);
+  overflow: hidden;
+  transition: all var(--ease);
+}
+.init-card:hover { border-color: var(--gold-dk); transform: translateY(-3px); box-shadow: var(--sh); }
 
-NUME
+.init-thumb { height: 165px; overflow: hidden; }
+.init-thumb img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.init-card:hover .init-thumb img { transform: scale(1.06); }
 
-EMAIL
+.init-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.35rem 1.5rem;
+}
+.init-icon {
+  flex-shrink: 0;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(200,169,81,.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: .95rem;
+}
+.init-body h3 { font-size: .97rem; margin-bottom: .3rem; }
+.init-body p  { font-size: .84rem; color: var(--fg2); line-height: 1.55; }
 
-SUBIECT
-              Alege un subiect
-              Vreau să fiu voluntar
-              Susțin un proiect cultural
-              Devin partener
-              Donez
-              Propun o colaborare artistică
-              Altele
-            
-MESAJ
-Trimite mesajul
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.4rem;
+  position: relative;
+  z-index: 1;
+}
 
-ALTERSPERO
-Susținem tinerii artiști și proiectele culturale care transformă creativitatea în impact social. Pentru noi, cultura nu este un privilegiu — este o resursă esențială pentru o societate sănătoasă.
-NAVIGARE
-	•	Cine suntem
-	•	Misiune & Viziune
-	•	Direcții culturale
-	•	Inițiative viitoare
-	•	Susține-ne
-	•	Jurnal cultural
-IMPLICĂ-TE
-	•	Devino voluntar
-	•	Susține un proiect
-	•	Devino partener
-	•	Donează
-	•	Propune o colaborare
-URMĂREȘTE-NE
+.support-card {
+  grid-column: span 2;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(200,169,81,.13);
+  border-radius: var(--r2);
+  padding: 1.85rem 1.6rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all var(--ease);
+}
+.support-card:nth-child(4) { grid-column: 2 / span 2; }
+.support-card:nth-child(5) { grid-column: 4 / span 2; }
 
+.support-card:hover {
+  background: rgba(200,169,81,.05);
+  border-color: rgba(200,169,81,.28);
+  transform: translateY(-4px);
+}
+.support-card--gold {
+  border-color: rgba(200,169,81,.3);
+  background: rgba(200,169,81,.04);
+}
 
+.support-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(200,169,81,.1);
+  border: 1px solid rgba(200,169,81,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin-bottom: 1.1rem;
+}
 
+.support-card h3 { font-size: 1.05rem; margin-bottom: .65rem; }
+.support-card p  { font-size: .875rem; color: var(--fg2); line-height: 1.62; flex: 1; margin-bottom: 1.25rem; }
 
-„Arta are puterea de a conecta oameni."
-© 2025 Alter Spero. Toate drepturile rezervate.
-Construit cu pentru cultură și comunitate.
+.journal-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--bdr2);
+  margin-bottom: 2.25rem;
+  overflow-x: auto;
+  gap: 0;
+}
+.j-tab {
+  background: none;
+  border: none;
+  padding: .8rem 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-size: .83rem;
+  color: var(--fg3);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all var(--ease);
+  white-space: nowrap;
+  letter-spacing: .04em;
+}
+.j-tab:hover    { color: var(--fg2); }
+.j-tab.active   { color: var(--gold); border-bottom-color: var(--gold); }
+
+.art-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--card);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r2);
+  overflow: hidden;
+  margin-bottom: 1.8rem;
+  transition: border-color var(--ease);
+}
+.art-featured:hover { border-color: var(--bdr2); }
+
+.art-featured-img {
+  position: relative;
+  overflow: hidden;
+}
+.art-featured-img img {
+  width: 100%; height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  transition: transform .5s ease;
+}
+.art-featured:hover .art-featured-img img { transform: scale(1.04); }
+
+.art-badge {
+  position: absolute;
+  top: 1rem; left: 1rem;
+  background: var(--gold);
+  color: #080808;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .3rem .7rem;
+  border-radius: 2px;
+}
+
+.art-featured-body {
+  padding: 2.5rem 2.5rem 2.5rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.art-meta {
+  display: flex;
+  gap: 1.1rem;
+  margin-bottom: .9rem;
+  font-size: .78rem;
+  color: var(--fg3);
+}
+.art-meta i { margin-right: .35rem; }
+
+.art-featured-body h2 {
+  font-size: 1.55rem;
+  line-height: 1.35;
+  margin-bottom: .9rem;
+}
+.art-featured-body p {
+  font-size: .88rem;
+  color: var(--fg2);
+  line-height: 1.72;
+  margin-bottom: .7rem;
+}
+
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+}
+
+.art-card {
+  background: var(--card);
+  border: 1px solid var(--bdr);
+  border-radius: var(--r2);
+  overflow: hidden;
+  transition: all var(--ease);
+}
+.art-card:hover { border-color: var(--bdr2); transform: translateY(-4px); box-shadow: var(--sh); }
+
+.art-card-img { height: 175px; overflow: hidden; }
+.art-card-img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform .4s ease;
+}
+.art-card:hover .art-card-img img { transform: scale(1.05); }
+
+.art-card-body { padding: 1.4rem; }
+
+.art-cat {
+  display: block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .45rem;
+}
+
+.art-card-body h4 { font-size: .97rem; line-height: 1.4; margin-bottom: .45rem; }
+.art-card-body p  { font-size: .83rem; color: var(--fg3); line-height: 1.58; margin-bottom: .9rem; }
+
+.read-more {
+  font-size: .8rem;
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-weight: 500;
+  transition: gap var(--ease);
+}
+.read-more:hover { gap: .72rem; }
+
+/* Journal cards generate de bot */
+.journal-card { margin-bottom: 2rem; }
+.journal-card details summary { list-style: none; }
+.journal-card details summary::-webkit-details-marker { display: none; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info h3 { font-size: 1.65rem; margin-bottom: .9rem; line-height: 1.3; }
+.contact-info > p { color: var(--fg2); font-size: .93rem; line-height: 1.78; margin-bottom: 1.85rem; }
+
+.contact-details { display: flex; flex-direction: column; gap: .9rem; margin-bottom: 1.75rem; }
+.c-item { display: flex; align-items: center; gap: .7rem; font-size: .88rem; color: var(--fg2); }
+.c-item i { color: var(--gold); width: 15px; flex-shrink: 0; }
+.c-item a:hover { color: var(--gold); }
+
+.social-row { display: flex; gap: .65rem; flex-wrap: wrap; }
+.social-btn {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--bdr2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .85rem;
+  color: var(--fg2);
+  transition: all var(--ease);
+}
+.social-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(200,169,81,.08);
+  transform: translateY(-2px);
+}
+
+.contact-form { display: flex; flex-direction: column; gap: 1.15rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.15rem; }
+
+.form-group { display: flex; flex-direction: column; gap: .4rem; }
+.form-group label {
+  font-size: .72rem;
+  font-weight: 600;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--fg2);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: var(--card);
+  border: 1px solid var(--bdr2);
+  border-radius: var(--r);
+  padding: .82rem 1rem;
+  font-family: 'Inter', sans-serif;
+  font-size: .88rem;
+  color: var(--fg);
+  outline: none;
+  transition: border-color var(--ease);
+  resize: vertical;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: var(--fg3); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus { border-color: var(--gold); }
+.form-group select option { background: #131313; }
+
+#footer {
+  background: var(--bg2);
+  border-top: 1px solid var(--bdr);
+  padding: 4rem 0 2rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand .nav-logo { display: inline-block; margin-bottom: 1rem; }
+.footer-brand p {
+  font-size: .85rem;
+  color: var(--fg3);
+  line-height: 1.72;
+  max-width: 290px;
+  margin-top: .75rem;
+}
+
+.footer-col h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--fg2);
+  margin-bottom: 1.1rem;
+}
+.footer-col ul { display: flex; flex-direction: column; gap: .55rem; }
+.footer-col a {
+  font-size: .855rem;
+  color: var(--fg3);
+  transition: color var(--ease);
+}
+.footer-col a:hover { color: var(--gold); }
+
+.footer-tagline {
+  margin-top: 1.25rem;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: .85rem;
+  color: var(--fg3);
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--bdr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+.footer-bottom p { font-size: .78rem; color: var(--fg3); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50%     { transform: translateX(-50%) translateY(-9px); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+
+@media (max-width: 1024px) {
+  .about-grid    { grid-template-columns: 1fr; gap: 2.5rem; }
+  .about-image   { order: -1; }
+  .about-image img { height: 320px; }
+  .mvv-grid      { grid-template-columns: 1fr; }
+  .footer-grid   { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .support-grid  { grid-template-columns: repeat(2, 1fr); }
+  .support-card,
+  .support-card:nth-child(4),
+  .support-card:nth-child(5) { grid-column: span 1; }
+}
+
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .nav-links {
+    position: fixed;
+    top: 0; right: -100%;
+    height: 100vh;
+    width: 270px;
+    background: rgba(8,8,8,.98);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5rem 1.75rem 2rem;
+    gap: 1.4rem;
+    border-left: 1px solid var(--bdr2);
+    transition: right var(--ease);
+    z-index: 1000;
+  }
+  .nav-links.open { right: 0; }
+  .nav-links a { font-size: .95rem; color: var(--fg); }
+  .hero-title  { font-size: clamp(3.5rem, 16vw, 5.5rem); }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .section { padding: 4rem 0; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .dir-grid  { grid-template-columns: 1fr; }
+  .init-grid { grid-template-columns: 1fr; }
+  .support-grid { grid-template-columns: 1fr; }
+  .art-featured { grid-template-columns: 1fr; }
+  .art-featured-img img { min-height: 240px; }
+  .art-featured-body { padding: 1.5rem; }
+  .art-grid  { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+  .form-row  { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 1.75rem; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 1.1rem; }
+  .about-stats { grid-template-columns: 1fr; }
+  .mvv-card { padding: 1.5rem 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-main">ALTER</span><span class="logo-gold">SPERO</span>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Deschide meniu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links" role="navigation">
+        <li><a href="#despre">Cine suntem</a></li>
+        <li><a href="#misiune">Misiune</a></li>
+        <li><a href="#directii">Direcții</a></li>
+        <li><a href="#initiative">Inițiative</a></li>
+        <li><a href="#sustine">Susține</a></li>
+        <li><a href="#jurnal">Jurnal</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-bg" role="img" aria-label="Imagine artistică"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Asociație Culturală · București</p>
+      <h1 class="hero-title">ALTER SPERO</h1>
+      <blockquote class="hero-quote">
+        „Cultura și maturitatea unei comunități se vede în felul în care
+        își sprijină artiștii înainte de a deveni celebri."
+      </blockquote>
+      <ul class="hero-beliefs" aria-label="Valorile noastre">
+        <li>Credem într-o cultură accesibilă, vie și conectată la comunitate.</li>
+        <li>Credem în artiștii care creează înainte de validare, înainte de succes și înainte de aplauze.</li>
+        <li>Credem că arta poate deveni spațiu de dialog, reflecție și apropiere între oameni.</li>
+      </ul>
+      <div class="hero-actions">
+        <a href="#despre" class="btn btn-primary">Descoperă Alter Spero</a>
+        <a href="#sustine" class="btn btn-outline">Susține un proiect</a>
+      </div>
+    </div>
+    <a href="#despre" class="scroll-hint" aria-label="Derulează în jos">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <section id="despre" class="section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-num">01</span>
+          <h2 class="section-title">Cine este<br><em>Alter Spero</em></h2>
+          <div class="divider"></div>
+          <p>Asociația Alter Spero a luat naștere din inițiativa unui grup de oameni motivați de dorința de a contribui activ la dezvoltarea unei societăți mai echilibrate, mai empatice și mai deschise către valorile autentice ale solidarității și responsabilității sociale.</p>
+          <p>Timp de peste 12 ani, membrii echipei s-au implicat constant în sprijinirea persoanelor aflate în situații vulnerabile, prin acțiuni sociale și inițiative dedicate comunității. Experiența acumulată ne-a arătat că schimbările reale apar atunci când oamenii sunt susținuți nu doar material, ci și uman, emoțional și cultural.</p>
+          <p>Astăzi, Alter Spero își propune să dezvolte proiecte culturale și artistice cu impact social, dedicate în special tinerilor creatori aflați la început de drum. Credem că arta are puterea de a conecta oameni, de a inspira dialog și de a transforma comunități.</p>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">12+</span>
+              <span class="stat-lbl">ani de implicare socială</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">4</span>
+              <span class="stat-lbl">direcții culturale</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">BUC</span>
+              <span class="stat-lbl">București & național</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-image reveal reveal-delay-2">
+          <img src="coloana.png" alt="Femeie contemplând Coloana Infinitului de Brâncuși" loading="lazy">
+          <div class="img-caption">Comunitate. Artă. Impact.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="misiune" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Ce ne propunem</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="mvv-grid">
+        <div class="mvv-card reveal reveal-delay-1">
+          <div class="mvv-icon"><i class="fas fa-compass"></i></div>
+          <h3>Misiunea noastră</h3>
+          <p>Credem că arta poate deveni un spațiu autentic de întâlnire între oameni, idei și comunități. Susținem inițiative culturale și tineri artiști care transformă creativitatea în impact social, construind o comunitate în care talentul poate crește liber.</p>
+        </div>
+        <div class="mvv-card mvv-card--accent reveal reveal-delay-2">
+          <div class="mvv-icon"><i class="fas fa-eye"></i></div>
+          <h3>Viziunea noastră</h3>
+          <p>Ne dorim o societate în care arta și cultura devin accesibile tuturor și reprezintă instrumente reale de dialog, educație și coeziune socială. Un București în care tinerii artiști au spațiu să creeze, să experimenteze și să fie susținuți înainte ca succesul lor să devină vizibil.</p>
+        </div>
+        <div class="mvv-card reveal reveal-delay-3">
+          <div class="mvv-icon"><i class="fas fa-heart"></i></div>
+          <h3>Valorile noastre</h3>
+          <div class="values-tags">
+            <span>Solidaritate</span><span>Creativitate</span><span>Incluziune</span>
+            <span>Responsabilitate socială</span><span>Colaborări artistice</span><span>Diversitate culturală</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="directii" class="section">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Direcții culturale</h2>
+        <p class="section-sub">Ce ne propunem să construim împreună</p>
+        <div class="divider divider--center"></div>
+      </div>
+      <div class="dir-grid">
+        <div class="dir-card reveal reveal-delay-1">
+          <div class="dir-img"><img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&h=280&q=80" alt="Tineri artiști pictând" loading="lazy"></div>
+          <div class="dir-body">
+            <div class="dir-icon"><i class="fas fa-palette"></i></div>
+            <h3>Susținerea tinerilor artiști</h3>
+            <p>Sprijinirea artiștilor emergenți prin promovare, mentorat și facilitarea accesului la spații și oportunități culturale.</p>
+            <blockquote>„Cultura are nevoie de susținere, nu doar de aplauze."</blockquote>
+          </div>
+        </div>
+        <div class="dir-card reveal reveal-delay-2">
+          <div class="dir-img"><img src="lut.png" alt="Mâini modelând lut — artă și creativitate" loading="lazy"></div>
+          <div class="dir-body">
+            <div class="dir-icon"><i class="fas fa-users"></i></div>
+            <h3>Proiecte cu impact social</h3>
+            <p>Organizarea de evenimente, expoziții, concerte și inițiative artistice care încurajează dialogul social și implicarea comunității.</p>
+            <blockquote>„Arta chiar are puterea de a schimba comunități."</blockquote>
+          </div>
+        </div>
+        <div class="dir-card reveal reveal-delay-3">
+          <div class="dir-img"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&h=280&q=80" alt="Copii la atelier de pictură" loading="lazy"></div>
+          <div class="dir-body">
+            <div class="dir-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Educație prin artă</h3>
+            <p>Dezvoltarea de activități educaționale și creative pentru copii și tineri, astfel încât creativitatea să întâlnească comunitatea.</p>
+            <blockquote>„Creativitate întâlnește comunitate."</blockquote>
+          </div>
+        </div>
+        <div class="dir-card reveal reveal-delay-4">
+          <div class="dir-img"><img src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&h=280&q=80" alt="Colaborare artistică interdisciplinară" loading="lazy"></div>
+          <div class="dir-body">
+            <div class="dir-icon"><i class="fas fa-link"></i></div>
+            <h3>Colaborări interdisciplinare</h3>
+            <p>Crearea de parteneriate între artiști, organizații culturale și comunități locale pentru proiecte transformatoare.</p>
+            <blockquote>„Împreună creăm mai mult."</blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="initiative" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Inițiative viitoare</h2>
+        <p class="section-sub">Proiecte în pregătire</p>
+        <div class="divider"></div>
+      </div>
+      <div class="init-grid">
+        <div class="init-card reveal reveal-delay-1">
+          <div class="init-thumb"><img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=400&h=220&q=80" alt="Concert de muzică live" loading="lazy"></div>
+          <div class="init-body"><div class="init-icon"><i class="fas fa-music"></i></div><div><h3>Seri de muzică live</h3><p>Seri dedicate artiștilor independenți, într-un spațiu care pune muzica pe primul loc.</p></div></div>
+        </div>
+        <div class="init-card reveal reveal-delay-2">
+          <div class="init-thumb"><img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?auto=format&fit=crop&w=400&h=220&q=80" alt="Expoziție de pictură și sculptură" loading="lazy"></div>
+          <div class="init-body"><div class="init-icon"><i class="fas fa-images"></i></div><div><h3>Expoziții colective</h3><p>Expoziții pentru tineri pictori și sculptori — un prim spațiu de vizibilitate reală.</p></div></div>
+        </div>
+        <div class="init-card reveal reveal-delay-3">
+          <div class="init-thumb"><img src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?auto=format&fit=crop&w=400&h=220&q=80" alt="Atelier creativ pentru copii" loading="lazy"></div>
+          <div class="init-body"><div class="init-icon"><i class="fas fa-paint-brush"></i></div><div><h3>Ateliere creative</h3><p>Ateliere pentru copii și adolescenți care vor să descopere lumea artei.</p></div></div>
+        </div>
+        <div class="init-card reveal reveal-delay-4">
+          <div class="init-thumb"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&h=220&q=80" alt="Eveniment cultural în spațiu alternativ" loading="lazy"></div>
+          <div class="init-body"><div class="init-icon"><i class="fas fa-map-marker-alt"></i></div><div><h3>Evenimente în spații alternative</h3><p>Cultură în spații neconvenționale din București — arta nu are nevoie de frontiere.</p></div></div>
+        </div>
+        <div class="init-card reveal reveal-delay-1">
+          <div class="init-thumb"><img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=400&h=220&q=80" alt="Artă urbană cu mesaj social" loading="lazy"></div>
+          <div class="init-body"><div class="init-icon"><i class="fas fa-spray-can"></i></div><div><h3>Campanii de artă urbană</h3><p>Mesaje sociale prin artă stradală — transformând spațiul public în galerie comunitară.</p></div></div>
+        </div>
+        <div class="init-card reveal reveal-delay-2">
+          <div class="init-thumb"><img src="https://images.unsplash.com/photo-1551009175-8a68da93d5f9?auto=format&fit=crop&w=400&h=220&q=80" alt="Rezidență artistică" loading="lazy"></div>
+          <div class="init-body"><div class="init-icon"><i class="fas fa-home"></i></div><div><h3>Rezidențe artistice</h3><p>Spații de creație și colaborare interdisciplinară pentru artiști din toate domeniile.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sustine" class="section section-warm">
+    <div class="container">
+      <div class="section-header section-header--center reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Susțineți și voi<br>inițiativele noastre</h2>
+        <div class="divider divider--center divider--gold"></div>
+        <p class="section-intro">Proiectele culturale independente au nevoie nu doar de vizibilitate, ci și de susținere reală pentru a putea crește. Prin contribuția ta, putem dezvolta inițiative dedicate tinerilor artiști și proiecte creative cu impact social.</p>
+      </div>
+      <div class="support-grid">
+        <div class="support-card reveal reveal-delay-1"><div class="support-icon"><i class="fas fa-hands-helping"></i></div><h3>Devino voluntar</h3><p>Alătură-te echipei și contribuie cu timpul și energia ta la proiectele noastre culturale.</p><a href="#contact" class="btn btn-outline-sm">Vreau să mă implic</a></div>
+        <div class="support-card reveal reveal-delay-2"><div class="support-icon"><i class="fas fa-star"></i></div><h3>Susține un proiect</h3><p>Finanțează direct un proiect cultural și ajută un tânăr artist să-și realizeze visul.</p><a href="#contact" class="btn btn-outline-sm">Alege un proiect</a></div>
+        <div class="support-card reveal reveal-delay-3"><div class="support-icon"><i class="fas fa-handshake"></i></div><h3>Devino partener</h3><p>Organizații, companii și instituții care împărtășesc valorile noastre sunt binevenite.</p><a href="#contact" class="btn btn-outline-sm">Hai să colaborăm</a></div>
+        <div class="support-card support-card--gold reveal reveal-delay-1"><div class="support-icon"><i class="fas fa-heart"></i></div><h3>Donează</h3><p>Orice contribuție, oricât de mică, ajută la construirea unui spațiu cultural mai bun.</p><a href="#contact" class="btn btn-gold-sm">Donează acum</a></div>
+        <div class="support-card reveal reveal-delay-2"><div class="support-icon"><i class="fas fa-lightbulb"></i></div><h3>Propune o colaborare</h3><p>Ai un proiect artistic? Vrei să colaborezi? Suntem deschiși la orice idee creativă.</p><a href="#contact" class="btn btn-outline-sm">Propune ideea ta</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="jurnal" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Jurnal cultural</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="journal-tabs" role="tablist">
+        <button class="j-tab active" data-tab="articole" role="tab" aria-selected="true">Articole</button>
+        <button class="j-tab" data-tab="reflectii" role="tab" aria-selected="false">Reflecții</button>
+        <button class="j-tab" data-tab="interviuri" role="tab" aria-selected="false">Interviuri</button>
+        <button class="j-tab" data-tab="recomandari" role="tab" aria-selected="false">Recomandări</button>
+        <button class="j-tab" data-tab="perspective" role="tab" aria-selected="false">Perspective</button>
+      </div>
+<!-- JURNAL-ARTICLES-START -->
+
+                <div class="journal-card" style="background:#1a1a1a;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3);border:1px solid #2a2a2a;margin-bottom:2rem;">
+                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=500&h=280&q=80" alt="Jucarii din Antichitate: copilaria la malul Marii Negre" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div style="padding:1.25rem 1.5rem 1.5rem;">
+                        <div style="font-size:.78rem;color:#9A9282;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
+                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;color:#F0EBE3;">Jucarii din Antichitate: copilaria la malul Marii Negre</h3>
+                        <p style="font-size:.9rem;color:#9A9282;line-height:1.6;margin:0 0 1rem;">Arheologii au scos la lumina jucarii romane din vechea cetate Tomis. O expozitie itineranta le aduce acum mai aproape de noi.</p>
+                        <details>
+                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid #2a2a2a;color:#C8A951;">Citeste integral</summary>
+                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#9A9282;">
+                                <p>Exista ceva profund emotionant in ideea ca, acum doua mii de ani, un copil se juca pe strazile cetatii Tomis cu un calusel pe rotite. Acelasi zambet, aceeasi bucurie, aceeasi nevoie de joaca pe care o recunoastem si astazi in ochii copiilor nostri.</p><p>Zornaitoare, figurine de animale, soldatei si calusei pe rotite - acestea sunt jucarii pastrate cu grija in incinta <strong>Muzeului National de Istorie si Arheologie Constanta</strong>. Nu sunt monumente impunatoare, nu sunt comori de aur sau inscriptii grandioase. Sunt obiecte mici, fragile, facute pentru maini mici.</p><p>Aceste obiecte vor pleca acum intr-un turneu itinerant prin tara, iar <strong>prima oprire va fi la Iasi, incepand din 19 iunie</strong>. Este o ocazie rara si valoroasa, mai ales pentru cei mici de astazi, care pot vedea astfel ca joaca este un limbaj universal.</p>
+                                <p><em>Sursa: <a href="https://www.digi24.ro/cultura" target="_blank" rel="noopener" style="color:#C8A951;">articol original</a></em></p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="journal-card" style="background:#1a1a1a;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3);border:1px solid #2a2a2a;margin-bottom:2rem;">
+                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=500&h=280&q=80" alt="Ia romaneasca, intre traditie si arta: o expozitie de neuitat la MNAR" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div style="padding:1.25rem 1.5rem 1.5rem;">
+                        <div style="font-size:.78rem;color:#9A9282;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
+                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;color:#F0EBE3;">Ia romaneasca, intre traditie si arta: o expozitie de neuitat la MNAR</h3>
+                        <p style="font-size:.9rem;color:#9A9282;line-height:1.6;margin:0 0 1rem;">Muzeul National de Arta al Romaniei gazduieste cea mai spectaculoasa expozitie dedicata iei romanesti. O invitatie la redescoperirea identitatii noastre culturale.</p>
+                        <details>
+                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid #2a2a2a;color:#C8A951;">Citeste integral</summary>
+                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#9A9282;">
+                                <p>Ia nu este doar o camasa. Este un document viu, tesut cu rabdare si dragoste de-a lungul generatiilor. Fiecare motiv brodat poarta o poveste, un sat, o familie, o credinta. Iar aceasta expozitie reuseste ceva rar: sa transforme un obiect familiar intr-o experienta profunda.</p><p>La Alter Spero credem ca tocmai astfel de initiative construiesc puntile dintre trecut si prezent, dintre comunitate si individ. Arta populara romaneasca nu este un muzeu al trecutului, ci o sursa vie de inspiratie pentru cei care vor sa inteleaga cine sunt si de unde vin.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="journal-card" style="background:#1a1a1a;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3);border:1px solid #2a2a2a;margin-bottom:2rem;">
+                    <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?auto=format&fit=crop&w=500&h=280&q=80" alt="Mastile africane povestesc la Cluj: o calatorie intre doua lumi" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div style="padding:1.25rem 1.5rem 1.5rem;">
+                        <div style="font-size:.78rem;color:#9A9282;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
+                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;color:#F0EBE3;">Mastile africane povestesc la Cluj: o calatorie intre doua lumi</h3>
+                        <p style="font-size:.9rem;color:#9A9282;line-height:1.6;margin:0 0 1rem;">Muzeul Etnografic al Transilvaniei gazduieste cea mai mare colectie de masti africane din Romania. O expozitie care merita vazuta.</p>
+                        <details>
+                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid #2a2a2a;color:#C8A951;">Citeste integral</summary>
+                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#9A9282;">
+                                <p>Mastile nu sunt simple obiecte decorative. In culturile africane, ele reprezinta punti intre lumea celor vii si cea a stramosilor, instrumente rituale incarcate de sens, de rugaciune si de memorie colectiva.</p><p>Cultura nu are granite. Uneori are nevoie doar de un muzeu curajos si de o sala bine iluminata ca sa ne aminteasca asta.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+                <div class="journal-card" style="background:#1a1a1a;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.3);border:1px solid #2a2a2a;margin-bottom:2rem;">
+                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=500&h=280&q=80" alt="Artistul roman din umbra Game of Thrones, recompensat cu un premiu Emmy" style="width:100%;height:200px;object-fit:cover;display:block;">
+                    <div style="padding:1.25rem 1.5rem 1.5rem;">
+                        <div style="font-size:.78rem;color:#9A9282;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
+                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;color:#F0EBE3;">Artistul roman din umbra Game of Thrones, recompensat cu un premiu Emmy</h3>
+                        <p style="font-size:.9rem;color:#9A9282;line-height:1.6;margin:0 0 1rem;">Un artist roman a contribuit la universul Game of Thrones si a fost recompensat cu un premiu Emmy. O poveste despre talent si recunoastere internationala.</p>
+                        <details>
+                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid #2a2a2a;color:#C8A951;">Citeste integral</summary>
+                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#9A9282;">
+                                <p>Exista oameni care construiesc lumi intregi fara ca numele lor sa apara pe afis. Oameni care lucreaza in spatele camerei si al caror talent ajunge sa fie vazut de sute de milioane de oameni fara ca ei sa fie recunoscuti pe strada.</p><p>Un premiu <strong>Emmy</strong> nu este o intamplare. Este rezultatul unor ani de dedicare, al unor nopti petrecute in ateliere si studiouri. La Alter Spero credem ca astfel de povesti merita spuse si auzite — pot deveni surse de inspiratie pentru tinerii artisti din Romania.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+<!-- JURNAL-ARTICLES-END -->
+    </div>
+  </section>
+
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Contact</h2>
+        <div class="divider"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Hai să construim ceva împreună</h3>
+          <p>Fie că vrei să te implici ca voluntar, să propui o colaborare artistică sau pur și simplu să afli mai multe despre proiectele noastre — suntem bucuroși să te ascultăm.</p>
+          <address class="contact-details">
+            <div class="c-item"><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:contact@alterspero.ro">contact@alterspero.ro</a></div>
+            <div class="c-item"><i class="fas fa-phone" aria-hidden="true"></i><a href="tel:+40731045667">+40 731 045 667</a></div>
+            <div class="c-item"><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>București, România</span></div>
+          </address>
+          <div class="social-row">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group"><label for="f-name">Nume</label><input type="text" id="f-name" name="name" placeholder="Numele tău" required></div>
+            <div class="form-group"><label for="f-email">Email</label><input type="email" id="f-email" name="email" placeholder="email@exemplu.ro" required></div>
+          </div>
+          <div class="form-group">
+            <label for="f-subject">Subiect</label>
+            <select id="f-subject" name="subject">
+              <option value="">Alege un subiect</option>
+              <option value="voluntar">Vreau să fiu voluntar</option>
+              <option value="proiect">Susțin un proiect cultural</option>
+              <option value="partener">Devin partener</option>
+              <option value="donatie">Donez</option>
+              <option value="colaborare">Propun o colaborare artistică</option>
+              <option value="altele">Altele</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="f-msg">Mesaj</label><textarea id="f-msg" name="message" rows="5" placeholder="Spune-ne ce gândești..." required></textarea></div>
+          <button type="submit" class="btn btn-primary btn-full">Trimite mesajul <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo"><span class="logo-main">ALTER</span><span class="logo-gold">SPERO</span></a>
+          <p>Susținem tinerii artiști și proiectele culturale care transformă creativitatea în impact social. Pentru noi, cultura nu este un privilegiu — este o resursă esențială pentru o societate sănătoasă.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigare</h4>
+          <ul>
+            <li><a href="#despre">Cine suntem</a></li>
+            <li><a href="#misiune">Misiune & Viziune</a></li>
+            <li><a href="#directii">Direcții culturale</a></li>
+            <li><a href="#initiative">Inițiative viitoare</a></li>
+            <li><a href="#sustine">Susține-ne</a></li>
+            <li><a href="#jurnal">Jurnal cultural</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Implică-te</h4>
+          <ul>
+            <li><a href="#sustine">Devino voluntar</a></li>
+            <li><a href="#sustine">Susține un proiect</a></li>
+            <li><a href="#sustine">Devino partener</a></li>
+            <li><a href="#sustine">Donează</a></li>
+            <li><a href="#contact">Propune o colaborare</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Urmărește-ne</h4>
+          <div class="social-row" style="margin-top:0.25rem">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+          <p class="footer-tagline">„Arta are puterea de a conecta oameni."</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Alter Spero. Toate drepturile rezervate.</p>
+        <p>Construit cu <i class="fas fa-heart" style="color:var(--gold)"></i> pentru cultură și comunitate.</p>
+      </div>
+    </div>
+  </footer>
+
+<script>
+// ============================================================
+//  ALTER SPERO — script.js (inlined)
+// ============================================================
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+const sections  = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+
+const sectionWatcher = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    navAnchors.forEach(a => a.classList.remove('active'));
+    const match = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+    if (match) match.classList.add('active');
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(s => sectionWatcher.observe(s));
+
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open', isOpen);
+  hamburger.setAttribute('aria-expanded', isOpen);
+});
+
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
+});
+
+document.addEventListener('click', e => {
+  if (!navbar.contains(e.target) && navLinks.classList.contains('open')) {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
+});
+
+const heroBg = document.querySelector('.hero-bg');
+if (heroBg) {
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y < window.innerHeight) {
+      heroBg.style.transform = `translateY(${y * 0.28}px)`;
+    }
+  }, { passive: true });
+}
+
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+revealEls.forEach(el => revealObserver.observe(el));
+
+const tabs = document.querySelectorAll('.j-tab');
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tab.classList.add('active');
+    tab.setAttribute('aria-selected', 'true');
+  });
+});
+
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const origContent = btn.innerHTML;
+    const email = contactForm.querySelector('#f-email').value;
+    if (!email.includes('@')) {
+      showFormMessage('Adresa de email nu este validă.', 'error');
+      return;
+    }
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Se trimite...';
+    setTimeout(() => {
+      btn.innerHTML = '<i class="fas fa-check"></i> Mesaj trimis cu succes!';
+      btn.style.background = '#2a6e4a';
+      showFormMessage('Mulțumim! Te vom contacta în curând.', 'success');
+      setTimeout(() => {
+        btn.innerHTML = origContent;
+        btn.style.background = '';
+        btn.disabled = false;
+        contactForm.reset();
+        removeFormMessage();
+      }, 4000);
+    }, 1200);
+  });
+}
+
+function showFormMessage(text, type) {
+  removeFormMessage();
+  const msg = document.createElement('p');
+  msg.id = 'form-msg';
+  msg.textContent = text;
+  msg.style.cssText = `padding:.65rem 1rem;border-radius:4px;font-size:.85rem;background:${type==='success'?'rgba(42,110,74,.25)':'rgba(160,40,40,.25)'};border:1px solid ${type==='success'?'#2a6e4a':'#8b2020'};color:${type==='success'?'#7ecba4':'#e07070'};margin-top:-.25rem;`;
+  contactForm.appendChild(msg);
+}
+
+function removeFormMessage() {
+  const old = document.getElementById('form-msg');
+  if (old) old.remove();
+}
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => {
+    const id = anchor.getAttribute('href').slice(1);
+    const target = document.getElementById(id);
+    if (!target) return;
+    e.preventDefault();
+    const offset = navbar.offsetHeight + 16;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
