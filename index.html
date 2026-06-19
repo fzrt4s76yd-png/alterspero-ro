@@ -1,596 +1,217 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Alter Spero este o asociație culturală dedicată susținerii tinerilor artiști și proiectelor cu impact social în București.">
-  <meta property="og:title" content="Alter Spero — Cultură. Comunitate. Impact.">
-  <meta property="og:description" content="Susținem tinerii artiști și proiectele culturale care transformă creativitatea în impact social.">
-  <meta property="og:type" content="website">
-  <title>Alter Spero — Cultură. Comunitate. Impact.</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- ============================================================
-       NAVBAR
-  ============================================================ -->
-  <nav id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <span class="logo-main">ALTER</span><span class="logo-gold">SPERO</span>
-      </a>
-      <button class="hamburger" id="hamburger" aria-label="Deschide meniu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <ul class="nav-links" id="nav-links" role="navigation">
-        <li><a href="#despre">Cine suntem</a></li>
-        <li><a href="#misiune">Misiune</a></li>
-        <li><a href="#directii">Direcții</a></li>
-        <li><a href="#initiative">Inițiative</a></li>
-        <li><a href="#sustine">Susține</a></li>
-        <li><a href="#jurnal">Jurnal</a></li>
-        <li><a href="#contact" class="nav-cta">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <!-- ============================================================
-       HERO
-  ============================================================ -->
-  <section id="hero">
-    <div class="hero-bg" role="img" aria-label="Imagine artistică"></div>
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Asociație Culturală · București</p>
-      <h1 class="hero-title">ALTER SPERO</h1>
-      <blockquote class="hero-quote">
-        „Cultura și maturitatea unei comunități se vede în felul în care
-        își sprijină artiștii înainte de a deveni celebri."
-      </blockquote>
-      <ul class="hero-beliefs" aria-label="Valorile noastre">
-        <li>Credem într-o cultură accesibilă, vie și conectată la comunitate.</li>
-        <li>Credem în artiștii care creează înainte de validare, înainte de succes și înainte de aplauze.</li>
-        <li>Credem că arta poate deveni spațiu de dialog, reflecție și apropiere între oameni.</li>
-      </ul>
-      <div class="hero-actions">
-        <a href="#despre" class="btn btn-primary">Descoperă Alter Spero</a>
-        <a href="#sustine" class="btn btn-outline">Susține un proiect</a>
-      </div>
-    </div>
-    <a href="#despre" class="scroll-hint" aria-label="Derulează în jos">
-      <i class="fas fa-chevron-down"></i>
-    </a>
-  </section>
-
-  <!-- ============================================================
-       01 · CINE ESTE ALTER SPERO
-  ============================================================ -->
-  <section id="despre" class="section">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-text reveal">
-          <span class="section-num">01</span>
-          <h2 class="section-title">Cine este<br><em>Alter Spero</em></h2>
-          <div class="divider"></div>
-          <p>Asociația Alter Spero a luat naștere din inițiativa unui grup de oameni motivați de dorința de a contribui activ la dezvoltarea unei societăți mai echilibrate, mai empatice și mai deschise către valorile autentice ale solidarității și responsabilității sociale.</p>
-          <p>Timp de peste 12 ani, membrii echipei s-au implicat constant în sprijinirea persoanelor aflate în situații vulnerabile, prin acțiuni sociale și inițiative dedicate comunității. Experiența acumulată ne-a arătat că schimbările reale apar atunci când oamenii sunt susținuți nu doar material, ci și uman, emoțional și cultural.</p>
-          <p>Astăzi, Alter Spero își propune să dezvolte proiecte culturale și artistice cu impact social, dedicate în special tinerilor creatori aflați la început de drum. Credem că arta are puterea de a conecta oameni, de a inspira dialog și de a transforma comunități.</p>
-          <div class="about-stats">
-            <div class="stat">
-              <span class="stat-num">12+</span>
-              <span class="stat-lbl">ani de implicare socială</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">4</span>
-              <span class="stat-lbl">direcții culturale</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">BUC</span>
-              <span class="stat-lbl">București & național</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-image reveal reveal-delay-2">
-          <img
-            src="coloana.png"
-            alt="Femeie contemplând Coloana Infinitului de Brâncuși"
-            loading="lazy"
-          >
-          <div class="img-caption">Comunitate. Artă. Impact.</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       02 · MISIUNE · VIZIUNE · VALORI
-  ============================================================ -->
-  <section id="misiune" class="section section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">02</span>
-        <h2 class="section-title">Ce ne propunem</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="mvv-grid">
-        <div class="mvv-card reveal reveal-delay-1">
-          <div class="mvv-icon"><i class="fas fa-compass"></i></div>
-          <h3>Misiunea noastră</h3>
-          <p>Credem că arta poate deveni un spațiu autentic de întâlnire între oameni, idei și comunități. Susținem inițiative culturale și tineri artiști care transformă creativitatea în impact social, construind o comunitate în care talentul poate crește liber.</p>
-        </div>
-        <div class="mvv-card mvv-card--accent reveal reveal-delay-2">
-          <div class="mvv-icon"><i class="fas fa-eye"></i></div>
-          <h3>Viziunea noastră</h3>
-          <p>Ne dorim o societate în care arta și cultura devin accesibile tuturor și reprezintă instrumente reale de dialog, educație și coeziune socială. Un București în care tinerii artiști au spațiu să creeze, să experimenteze și să fie susținuți înainte ca succesul lor să devină vizibil.</p>
-        </div>
-        <div class="mvv-card reveal reveal-delay-3">
-          <div class="mvv-icon"><i class="fas fa-heart"></i></div>
-          <h3>Valorile noastre</h3>
-          <div class="values-tags">
-            <span>Solidaritate</span>
-            <span>Creativitate</span>
-            <span>Incluziune</span>
-            <span>Responsabilitate socială</span>
-            <span>Colaborări artistice</span>
-            <span>Diversitate culturală</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       03 · DIRECȚII CULTURALE
-  ============================================================ -->
-  <section id="directii" class="section">
-    <div class="container">
-      <div class="section-header section-header--center reveal">
-        <span class="section-num">03</span>
-        <h2 class="section-title">Direcții culturale</h2>
-        <p class="section-sub">Ce ne propunem să construim împreună</p>
-        <div class="divider divider--center"></div>
-      </div>
-      <div class="dir-grid">
-        <div class="dir-card reveal reveal-delay-1">
-          <div class="dir-img">
-            <img
-              src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=600&h=280&q=80"
-              alt="Tineri artiști pictând"
-              loading="lazy"
-            >
-          </div>
-          <div class="dir-body">
-            <div class="dir-icon"><i class="fas fa-palette"></i></div>
-            <h3>Susținerea tinerilor artiști</h3>
-            <p>Sprijinirea artiștilor emergenți prin promovare, mentorat și facilitarea accesului la spații și oportunități culturale.</p>
-            <blockquote>„Cultura are nevoie de susținere, nu doar de aplauze."</blockquote>
-          </div>
-        </div>
-        <div class="dir-card reveal reveal-delay-2">
-          <div class="dir-img">
-            <img
-              src="lut.png"
-              alt="Mâini modelând lut — artă și creativitate"
-              loading="lazy"
-            >
-          </div>
-          <div class="dir-body">
-            <div class="dir-icon"><i class="fas fa-users"></i></div>
-            <h3>Proiecte cu impact social</h3>
-            <p>Organizarea de evenimente, expoziții, concerte și inițiative artistice care încurajează dialogul social și implicarea comunității.</p>
-            <blockquote>„Arta chiar are puterea de a schimba comunități."</blockquote>
-          </div>
-        </div>
-        <div class="dir-card reveal reveal-delay-3">
-          <div class="dir-img">
-            <img
-              src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&h=280&q=80"
-              alt="Copii la atelier de pictură"
-              loading="lazy"
-            >
-          </div>
-          <div class="dir-body">
-            <div class="dir-icon"><i class="fas fa-graduation-cap"></i></div>
-            <h3>Educație prin artă</h3>
-            <p>Dezvoltarea de activități educaționale și creative pentru copii și tineri, astfel încât creativitatea să întâlnească comunitatea.</p>
-            <blockquote>„Creativitate întâlnește comunitate."</blockquote>
-          </div>
-        </div>
-        <div class="dir-card reveal reveal-delay-4">
-          <div class="dir-img">
-            <img
-              src="https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&w=600&h=280&q=80"
-              alt="Colaborare artistică interdisciplinară"
-              loading="lazy"
-            >
-          </div>
-          <div class="dir-body">
-            <div class="dir-icon"><i class="fas fa-link"></i></div>
-            <h3>Colaborări interdisciplinare</h3>
-            <p>Crearea de parteneriate între artiști, organizații culturale și comunități locale pentru proiecte transformatoare.</p>
-            <blockquote>„Împreună creăm mai mult."</blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       04 · INIȚIATIVE VIITOARE
-  ============================================================ -->
-  <section id="initiative" class="section section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">04</span>
-        <h2 class="section-title">Inițiative viitoare</h2>
-        <p class="section-sub">Proiecte în pregătire</p>
-        <div class="divider"></div>
-      </div>
-      <div class="init-grid">
-
-        <div class="init-card reveal reveal-delay-1">
-          <div class="init-thumb">
-            <img src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&w=400&h=220&q=80" alt="Concert de muzică live" loading="lazy">
-          </div>
-          <div class="init-body">
-            <div class="init-icon"><i class="fas fa-music"></i></div>
-            <div>
-              <h3>Seri de muzică live</h3>
-              <p>Seri dedicate artiștilor independenți, într-un spațiu care pune muzica pe primul loc.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="init-card reveal reveal-delay-2">
-          <div class="init-thumb">
-            <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?auto=format&fit=crop&w=400&h=220&q=80" alt="Expoziție de pictură și sculptură" loading="lazy">
-          </div>
-          <div class="init-body">
-            <div class="init-icon"><i class="fas fa-images"></i></div>
-            <div>
-              <h3>Expoziții colective</h3>
-              <p>Expoziții pentru tineri pictori și sculptori — un prim spațiu de vizibilitate reală.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="init-card reveal reveal-delay-3">
-          <div class="init-thumb">
-            <img src="https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?auto=format&fit=crop&w=400&h=220&q=80" alt="Atelier creativ pentru copii" loading="lazy">
-          </div>
-          <div class="init-body">
-            <div class="init-icon"><i class="fas fa-paint-brush"></i></div>
-            <div>
-              <h3>Ateliere creative</h3>
-              <p>Ateliere pentru copii și adolescenți care vor să descopere lumea artei.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="init-card reveal reveal-delay-4">
-          <div class="init-thumb">
-            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&h=220&q=80" alt="Eveniment cultural în spațiu alternativ" loading="lazy">
-          </div>
-          <div class="init-body">
-            <div class="init-icon"><i class="fas fa-map-marker-alt"></i></div>
-            <div>
-              <h3>Evenimente în spații alternative</h3>
-              <p>Cultură în spații neconvenționale din București — arta nu are nevoie de frontiere.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="init-card reveal reveal-delay-1">
-          <div class="init-thumb">
-            <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=400&h=220&q=80" alt="Artă urbană cu mesaj social" loading="lazy">
-          </div>
-          <div class="init-body">
-            <div class="init-icon"><i class="fas fa-spray-can"></i></div>
-            <div>
-              <h3>Campanii de artă urbană</h3>
-              <p>Mesaje sociale prin artă stradală — transformând spațiul public în galerie comunitară.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="init-card reveal reveal-delay-2">
-          <div class="init-thumb">
-            <img src="https://images.unsplash.com/photo-1551009175-8a68da93d5f9?auto=format&fit=crop&w=400&h=220&q=80" alt="Rezidență artistică" loading="lazy">
-          </div>
-          <div class="init-body">
-            <div class="init-icon"><i class="fas fa-home"></i></div>
-            <div>
-              <h3>Rezidențe artistice</h3>
-              <p>Spații de creație și colaborare interdisciplinară pentru artiști din toate domeniile.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       05 · SUSȚINEȚI INIȚIATIVELE
-  ============================================================ -->
-  <section id="sustine" class="section section-warm">
-    <div class="container">
-      <div class="section-header section-header--center reveal">
-        <span class="section-num">05</span>
-        <h2 class="section-title">Susțineți și voi<br>inițiativele noastre</h2>
-        <div class="divider divider--center divider--gold"></div>
-        <p class="section-intro">Proiectele culturale independente au nevoie nu doar de vizibilitate, ci și de susținere reală pentru a putea crește. Prin contribuția ta, putem dezvolta inițiative dedicate tinerilor artiști și proiecte creative cu impact social.</p>
-      </div>
-      <div class="support-grid">
-        <div class="support-card reveal reveal-delay-1">
-          <div class="support-icon"><i class="fas fa-hands-helping"></i></div>
-          <h3>Devino voluntar</h3>
-          <p>Alătură-te echipei și contribuie cu timpul și energia ta la proiectele noastre culturale.</p>
-          <a href="#contact" class="btn btn-outline-sm">Vreau să mă implic</a>
-        </div>
-        <div class="support-card reveal reveal-delay-2">
-          <div class="support-icon"><i class="fas fa-star"></i></div>
-          <h3>Susține un proiect</h3>
-          <p>Finanțează direct un proiect cultural și ajută un tânăr artist să-și realizeze visul.</p>
-          <a href="#contact" class="btn btn-outline-sm">Alege un proiect</a>
-        </div>
-        <div class="support-card reveal reveal-delay-3">
-          <div class="support-icon"><i class="fas fa-handshake"></i></div>
-          <h3>Devino partener</h3>
-          <p>Organizații, companii și instituții care împărtășesc valorile noastre sunt binevenite.</p>
-          <a href="#contact" class="btn btn-outline-sm">Hai să colaborăm</a>
-        </div>
-        <div class="support-card support-card--gold reveal reveal-delay-1">
-          <div class="support-icon"><i class="fas fa-heart"></i></div>
-          <h3>Donează</h3>
-          <p>Orice contribuție, oricât de mică, ajută la construirea unui spațiu cultural mai bun.</p>
-          <a href="#contact" class="btn btn-gold-sm">Donează acum</a>
-        </div>
-        <div class="support-card reveal reveal-delay-2">
-          <div class="support-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3>Propune o colaborare</h3>
-          <p>Ai un proiect artistic? Vrei să colaborezi? Suntem deschiși la orice idee creativă.</p>
-          <a href="#contact" class="btn btn-outline-sm">Propune ideea ta</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       06 · JURNAL CULTURAL
-  ============================================================ -->
-  <section id="jurnal" class="section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">06</span>
-        <h2 class="section-title">Jurnal cultural</h2>
-        <div class="divider"></div>
-      </div>
-
-      <div class="journal-tabs" role="tablist">
-        <button class="j-tab active" data-tab="articole" role="tab" aria-selected="true">Articole</button>
-        <button class="j-tab" data-tab="reflectii" role="tab" aria-selected="false">Reflecții</button>
-        <button class="j-tab" data-tab="interviuri" role="tab" aria-selected="false">Interviuri</button>
-        <button class="j-tab" data-tab="recomandari" role="tab" aria-selected="false">Recomandări</button>
-        <button class="j-tab" data-tab="perspective" role="tab" aria-selected="false">Perspective</button>
-      </div>
-<!-- JURNAL-ARTICLES-START -->
-
-                <div class="journal-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.07);margin-bottom:2rem;">
-                    <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=500&h=280&q=80" alt="Jucarii din Antichitate: copilaria la malul Marii Negre" style="width:100%;height:200px;object-fit:cover;display:block;">
-                    <div style="padding:1.25rem 1.5rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#888;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
-                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;">Jucarii din Antichitate: copilaria la malul Marii Negre</h3>
-                        <p style="font-size:.9rem;color:#555;line-height:1.6;margin:0 0 1rem;">Arheologii au scos la lumina jucarii romane din vechea cetate Tomis. O expozitie itineranta le aduce acum mai aproape de noi.</p>
-                        <details>
-                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid rgba(0,0,0,.08);">Citeste integral</summary>
-                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#333;">
-                                <p>Exista ceva profund emotionant in ideea ca, acum doua mii de ani, un copil se juca pe strazile cetatii Tomis cu un calusel pe rotite. Acelasi zambet, aceeasi bucurie, aceeasi nevoie de joaca pe care o recunoastem si astazi in ochii copiilor nostri. Arheologii au descoperit in vechea cetate greceasca si romana de la Constanta o serie de obiecte care ne poarta direct in lumea cea mai intima a antichitatii: lumea copiilor.</p><p>Zornaitoare, figurine de animale, soldatei si calusei pe rotite - acestea sunt jucarii pastrate cu grija in incinta <strong>Muzeului National de Istorie si Arheologie Constanta</strong>. Nu sunt monumente impunatoare, nu sunt comori de aur sau inscriptii grandioase. Sunt obiecte mici, fragile, facute pentru maini mici. Si tocmai de aceea ne misca atat de tare.</p><p>Frumusetea acestei descoperiri sta in simplitatea ei. Ne aminteste ca istoria nu inseamna doar razboaie si impliniri de imperii. Istoria inseamna si un copil care alerga desculț pe o ulita din Tomis, tragand dupa el un mic cal de lut cu rotite de lemn. Inseamna o mama care ii darui fiului sau o zornaitoare ca sa il faca sa rada.</p><p>Aceste obiecte vor pleca acum intr-un turneu itinerant prin tara, iar <strong>prima oprire va fi la Iasi, incepand din 19 iunie</strong>. Este o ocazie rara si valoroasa, mai ales pentru cei mici de astazi, care pot vedea astfel ca joaca este un limbaj universal, care nu s-a schimbat in doua milenii.</p><p>La <strong>Alter Spero</strong>, credem ca astfel de expozitii fac mai mult decat sa informeze. Ele reconecteaza comunitatile cu radacinile lor, aduc trecutul la nivelul ochilor unui copil curios si transforma muzeul intr-un loc viu, nu doar intr-un depozit de obiecte vechi. Daca aveti ocazia sa ajungeti la Iasi in aceasta vara sau in oricare dintre orasele unde va ajunge expozitia, nu ratati aceasta intalnire cu copilaria din antichitate.</p><p>Uneori, cele mai puternice povesti despre cine suntem se ascund in cele mai mici lucruri.</p>
-                                <p><em>Sursa: <a href="https://www.digi24.ro/cultura" target="_blank" rel="noopener">articol original</a></em></p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
+ALTERSPERO
+	•	Cine suntem
+	•	Misiune
+	•	Direcții
+	•	Inițiative
+	•	Susține
+	•	Jurnal
+	•	Contact
 
 
-                <div class="journal-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.07);margin-bottom:2rem;">
-                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=500&h=280&q=80" alt="Jucarii din Antichitate: copilaria de acum 2000 de ani, la un pas de noi" style="width:100%;height:200px;object-fit:cover;display:block;">
-                    <div style="padding:1.25rem 1.5rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#888;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
-                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;">Jucarii din Antichitate: copilaria de acum 2000 de ani, la un pas de noi</h3>
-                        <p style="font-size:.9rem;color:#555;line-height:1.6;margin:0 0 1rem;">Caluți pe roti, zornaitoare si figurine de animale - jucarii descoperite la Tomis ajung in expozitii din toata tara. Prima oprire: Iasi, din 19 iunie.</p>
-                        <details>
-                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid rgba(0,0,0,.08);">Citeste integral</summary>
-                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#333;">
-                                <p>Exista ceva profund emotionant in ideea ca un copil care a trait acum doua milenii se juca, la fel ca oricare altul, cu un calut pe roti sau cu o zornaitoare. Ca radea, ca se bosumfla, ca isi pierdea jucaria preferata prin colturi de casa. Descoperirile arheologice de la Tomis - vechea cetate greceasca ce se ascunde sub actualul Constanta - ne aduc exact aceasta revelatie, simpla si tulburatoare.</p><p>Muzeul National de Istorie si Arheologie Constanta pastreaza de multa vreme aceste marturii fragile ale copilariei antice. <strong>Caluți pe roti, figurine de animale, soldatei si zornaitoare</strong> - obiecte care ar putea sta linistit si intr-un magazin de jucarii de azi, daca nu ar purta pe ele patina a doua mii de ani de istorie. Acum, aceste comori parasesc pentru prima data spatiul muzeului constantean si pornesc intr-un turneu national.</p><p>Prima oprire este <strong>Iasul, incepand din 19 iunie</strong>, si sintem de parere ca e un eveniment care merita toata atentia. Nu pentru ca ar fi o expozitie spectaculoasa in sens vizual - nu vorbim de tablouri imense sau instalatii multimedia. Ci pentru ca ne pune fata in fata cu ceva esential: <strong>umanitatea nu s-a schimbat atat de mult pe cat credem</strong>.</p><p>La Alter Spero, vorbim des despre rolul culturii ca punte intre oameni si comunitati. Ei bine, aceste jucarii sint poate cel mai bun exemplu al acestui rol. Ele nu au nevoie de traducere, nu au nevoie de context academic complicat. Un parinte care merge la expozitie cu copilul sau va intelege imediat si visceral ce vede in fata lui: un alt copil, dintr-un alt timp, care a iubit exact aceleasi lucruri.</p><p>Va incurajam sa urmariti traseul acestei expozitii si, daca aveti ocazia, sa o vizitati. Duceti-va cu cei mici. Lasati-i sa priveasca acei soldatei de lut si intrebati-i ce cred ca simtea copilul care i-a tinut in mana cu secole in urma. <strong>Raspunsul lor va fi, cu siguranta, mai intelept decat orice analiza istorica.</strong></p><p>Cultura inseamna si asta: sa descoperi ca distanta dintre noi si stramos nu e chiar atat de mare.</p>
-                                <p><em>Sursa: <a href="https://www.digi24.ro/cultura" target="_blank" rel="noopener">articol original</a></em></p>
-                            </div>
-                        </details>
-                    </div>
-                </div>
+ASOCIAȚIE CULTURALĂ · BUCUREȘTI
+ALTER SPERO
+„Cultura și maturitatea unei comunități se vede în felul în care își sprijină artiștii înainte de a deveni celebri."
+	•	Credem într-o cultură accesibilă, vie și conectată la comunitate.
+	•	Credem în artiștii care creează înainte de validare, înainte de succes și înainte de aplauze.
+	•	Credem că arta poate deveni spațiu de dialog, reflecție și apropiere între oameni.
+Descoperă Alter Spero Susține un proiect
+
+01
+Cine este Alter Spero
+
+Asociația Alter Spero a luat naștere din inițiativa unui grup de oameni motivați de dorința de a contribui activ la dezvoltarea unei societăți mai echilibrate, mai empatice și mai deschise către valorile autentice ale solidarității și responsabilității sociale.
+Timp de peste 12 ani, membrii echipei s-au implicat constant în sprijinirea persoanelor aflate în situații vulnerabile, prin acțiuni sociale și inițiative dedicate comunității. Experiența acumulată ne-a arătat că schimbările reale apar atunci când oamenii sunt susținuți nu doar material, ci și uman, emoțional și cultural.
+Astăzi, Alter Spero își propune să dezvolte proiecte culturale și artistice cu impact social, dedicate în special tinerilor creatori aflați la început de drum. Credem că arta are puterea de a conecta oameni, de a inspira dialog și de a transforma comunități.
+12+
+ANI DE IMPLICARE SOCIALĂ
+4
+DIRECȚII CULTURALE
+BUC
+BUCUREȘTI & NAȚIONAL
+
+Comunitate. Artă. Impact.
+02
+Ce ne propunem
 
 
-                <div class="journal-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.07);margin-bottom:2rem;">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=500&h=280&q=80" alt="Ia romaneasca, intre traditie si arta: o expozitie de neuitat la MNAR" style="width:100%;height:200px;object-fit:cover;display:block;">
-                    <div style="padding:1.25rem 1.5rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#888;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
-                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;">Ia romaneasca, intre traditie si arta: o expozitie de neuitat la MNAR</h3>
-                        <p style="font-size:.9rem;color:#555;line-height:1.6;margin:0 0 1rem;">Muzeul National de Arta al Romaniei gazduieste cea mai spectaculoasa expozitie dedicata iei romanesti. O invitatie la redescoperirea identitatii noastre culturale.</p>
-                        <details>
-                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid rgba(0,0,0,.08);">Citeste integral</summary>
-                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#333;">
-                                <p>Exista momente in care cultura unui popor iese din cartile de istorie si prinde viata in fata ochilor tai. Unul dintre aceste momente se intampla chiar acum, la Muzeul National de Arta din Bucuresti, unde s-a deschis cea mai ampla si mai spectaculoasa expozitie dedicata vreodata iei romanesti.</p><p>Ia nu este doar o camasa. Este un document viu, tesut cu rabdare si dragoste de-a lungul generatiilor. Fiecare motiv brodat poarta o poveste, un sat, o familie, o credinta. Iar aceasta expozitie reuseste ceva rar: sa transforme un obiect familiar intr-o experienta profunda.</p><p>Pentru cei care au crescut vazand ia agatata in sifonierul bunicii, vizita la muzeu poate fi o redescoperire emotionanta. Pentru cei mai tineri, poate fi primul contact autentic cu o traditie care a supravietuit secole si care, iata, continua sa inspire.</p><p><strong>De ce conteaza acest moment?</strong> Traim intr-o epoca in care identitatea culturala este adesea dildata sau redusa la clisee de marketing. O expozitie ca aceasta vine si spune, cu eleganta si rigoare, ca mostenirea noastra merita atentie serioasa si respect real. Nu nostalgie, ci cunoastere.</p><p>La Alter Spero credem ca tocmai astfel de initiative construiesc puntile dintre trecut si prezent, dintre comunitate si individ. Arta populara romaneasca nu este un muzeu al trecutului, ci o sursa vie de inspiratie pentru cei care vor sa inteleaga cine sunt si de unde vin.</p><p><strong>Va invitam sa mergeti la aceasta expozitie</strong>, sa priviti cu atentie fiecare piesa, sa cititi povestile din spatele lor si sa plecati acasa cu ceva in plus: un sentiment de apartenenta si de mandrie linistita, fara zgomot, fara exagerare.</p><p>Muzeul National de Arta al Romaniei este, din nou, locul unde Bucurestiul respira frumos. Iar ia romaneasca isi ocupa, pe buna dreptate, locul de onoare pe care il merita.</p>
-                                
-                            </div>
-                        </details>
-                    </div>
-                </div>
+Misiunea noastră
+Credem că arta poate deveni un spațiu autentic de întâlnire între oameni, idei și comunități. Susținem inițiative culturale și tineri artiști care transformă creativitatea în impact social, construind o comunitate în care talentul poate crește liber.
+
+Viziunea noastră
+Ne dorim o societate în care arta și cultura devin accesibile tuturor și reprezintă instrumente reale de dialog, educație și coeziune socială. Un București în care tinerii artiști au spațiu să creeze, să experimenteze și să fie susținuți înainte ca succesul lor să devină vizibil.
+
+Valorile noastre
+Solidaritate
+Creativitate
+Incluziune
+Responsabilitate socială
+Colaborări artistice
+Diversitate culturală
+03
+Direcții culturale
+Ce ne propunem să construim împreună
 
 
-                <div class="journal-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.07);margin-bottom:2rem;">
-                    <img src="https://images.unsplash.com/photo-1578926288207-a90a5366759d?auto=format&fit=crop&w=500&h=280&q=80" alt="Mastile africane povestesc la Cluj: o calatorie intre doua lumi" style="width:100%;height:200px;object-fit:cover;display:block;">
-                    <div style="padding:1.25rem 1.5rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#888;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
-                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;">Mastile africane povestesc la Cluj: o calatorie intre doua lumi</h3>
-                        <p style="font-size:.9rem;color:#555;line-height:1.6;margin:0 0 1rem;">Muzeul Etnografic al Transilvaniei gazduieste cea mai mare colectie de masti africane din Romania. O expozitie care merita vazuta.</p>
-                        <details>
-                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid rgba(0,0,0,.08);">Citeste integral</summary>
-                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#333;">
-                                <p>Exista locuri care te surprind tocmai pentru ca nu te astepti sa le gasesti acolo. Muzeul Etnografic al Transilvaniei din Cluj este, fara indoiala, unul dintre ele. De aceasta data, intre peretii sai familiari, a prins viata cea mai mare colectie de <strong>masti africane din Romania</strong>, o expozitie care aduce fata in fata doua universuri culturale aparent indepartate, dar surprinzator de apropiate in esenta lor.</p><p>Mastile nu sunt simple obiecte decorative. In culturile africane, ele reprezinta punti intre lumea celor vii si cea a stramosilor, instrumente rituale incarcate de sens, de rugaciune si de memorie colectiva. Privite cu atentie, ele vorbesc despre comunitati intregi, despre felul in care oamenii au ales sa se raporteze la mister, la moarte si la sarbatoare.</p><p>Este fascinant ca aceasta intalnire are loc tocmai la Cluj, un oras cu o identitate culturala stratificata, unde <strong>diversitatea a fost mereu o sursa de bogatie</strong>, nu de tensiune. Muzeul Etnografic al Transilvaniei, cu traditia sa de a pastra si celebra patrimoniul uman, se dovedeste gazda perfecta pentru o astfel de colectie. Nu este un paradox, ci o continuare fireasca a misiunii sale.</p><p>Pentru noi, cei de la Alter Spero, astfel de initiative conteaza in mod special. Credem ca arta si cultura au puterea de a construi punti acolo unde prejudecatile ridica ziduri. O masca africana expusa la Cluj nu este doar un obiect de muzeu, este o <strong>invitatie la dialog</strong>, la curiozitate, la umilinta in fata diversitatii uriase a experientei umane.</p><p>Daca aveti ocazia sa ajungeti la Cluj in perioada urmatoare, rezervati-va timp pentru aceasta expozitie. Mergeti cu copiii, cu prietenii, cu oricine are chef sa fie surprins. Lasati mastile sa va priveasca si veti descoperi ca, undeva dincolo de diferente, ne recunoastem unii pe altii.</p><p>Cultura nu are granite. Uneori are nevoie doar de un muzeu curajos si de o sala bine iluminata ca sa ne aminteasca asta.</p>
-                                
-                            </div>
-                        </details>
-                    </div>
-                </div>
+
+Susținerea tinerilor artiști
+Sprijinirea artiștilor emergenți prin promovare, mentorat și facilitarea accesului la spații și oportunități culturale.
+„Cultura are nevoie de susținere, nu doar de aplauze."
 
 
-                <div class="journal-card" style="background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.06);border:1px solid rgba(0,0,0,.07);margin-bottom:2rem;">
-                    <img src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=500&h=280&q=80" alt="Artistul roman din umbra Game of Thrones, recompensat cu un premiu Emmy" style="width:100%;height:200px;object-fit:cover;display:block;">
-                    <div style="padding:1.25rem 1.5rem 1.5rem;">
-                        <div style="font-size:.78rem;color:#888;margin-bottom:.6rem;">Articole &nbsp;·&nbsp; Iunie 2026 &nbsp;·&nbsp; 4 min citire</div>
-                        <h3 style="font-size:1.1rem;font-weight:700;margin:0 0 .75rem;line-height:1.4;">Artistul roman din umbra Game of Thrones, recompensat cu un premiu Emmy</h3>
-                        <p style="font-size:.9rem;color:#555;line-height:1.6;margin:0 0 1rem;">Un artist roman a contribuit la universul Game of Thrones si a fost recompensat cu un premiu Emmy. O poveste despre talent, munca discreta si recunoastere internationala.</p>
-                        <details>
-                            <summary style="cursor:pointer;font-size:.85rem;font-weight:600;padding:.5rem 0;border-top:1px solid rgba(0,0,0,.08);">Citeste integral</summary>
-                            <div style="padding-top:1rem;font-size:.9rem;line-height:1.75;color:#333;">
-                                <p>Exista oameni care construiesc lumi intregi fara ca numele lor sa apara pe afis. Oameni care lucreaza in spatele camerei, dincolo de reflectoare, si al caror talent ajunge sa fie vazut de sute de milioane de oameni fara ca ei sa fie recunoscuti pe strada. Unul dintre acesti oameni este un artist roman care a facut parte din echipa care a dat viata universului <strong>Game of Thrones</strong>, unul dintre cele mai urmarite seriale din istoria televiziunii mondiale.</p><p>Povestea lui este, in fond, povestea multor romani care au ales sa-si urmeze meseria cu seriozitate si discretie, departe de zgomotul publicitar, si care au ajuns sa fie apreciati acolo unde contează cel mai mult: in industria globala a artei vizuale si a productiei cinematografice.</p><p>Un premiu <strong>Emmy</strong> nu este o intamplare. Este rezultatul unor ani de dedicare, al unor nopti petrecute in ateliere si studiouri, al unui ochi format sa vada detalii pe care altii le trec cu vederea. Faptul ca un roman a ajuns sa primeasca o astfel de recunoastere pentru contributia sa la o productie de asemenea anvergura ne spune ceva important despre nivelul la care pot ajunge profesionistii nostri atunci cand li se ofera contextul potrivit.</p><p>La <strong>Alter Spero</strong>, credem ca astfel de povesti merita spuse si auzite. Nu doar pentru ca ne umplu de mandrie, ci pentru ca pot deveni surse de inspiratie pentru tinerii artisti si creatori din Romania care inca se intreaba daca merita sa isi urmeze vocatia pana la capat.</p><p>Industria creativa romaneasca are resurse umane remarcabile. Designeri, animatori, scenografi, ilustratori si artisti vizuali care lucreaza atat in tara, cat si in productii internationale de top. Ei sunt, de multe ori, <strong>ambasadorii tai culturali pe care nu ii stii pe nume</strong>, dar ale caror creatii le-ai admirat fara sa stii.</p><p>Aceasta poveste este un memento frumos: arta facuta cu pasiune si profesionalism isi gaseste, mai devreme sau mai tarziu, locul meritat in lumina. Chiar daca acea lumina vine de la o statueta Emmy primita, poate, departe de casa.</p>
-                                
-                            </div>
-                        </details>
-                    </div>
-                </div>
-<!-- JURNAL-ARTICLES-END -->
-      </div>
-    </div>
-  </section>
+Proiecte cu impact social
+Organizarea de evenimente, expoziții, concerte și inițiative artistice care încurajează dialogul social și implicarea comunității.
+„Arta chiar are puterea de a schimba comunități."
 
-  <!-- ============================================================
-       07 · CONTACT
-  ============================================================ -->
-  <section id="contact" class="section section-dark">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-num">07</span>
-        <h2 class="section-title">Contact</h2>
-        <div class="divider"></div>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info reveal">
-          <h3>Hai să construim ceva împreună</h3>
-          <p>Fie că vrei să te implici ca voluntar, să propui o colaborare artistică sau pur și simplu să afli mai multe despre proiectele noastre — suntem bucuroși să te ascultăm.</p>
-          <address class="contact-details">
-            <div class="c-item">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
-              <a href="mailto:contact@alterspero.ro">contact@alterspero.ro</a>
-            </div>
-            <div class="c-item">
-              <i class="fas fa-phone" aria-hidden="true"></i>
-              <a href="tel:+40731045667">+40 731 045 667</a>
-            </div>
-            <div class="c-item">
-              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-              <span>București, România</span>
-            </div>
-          </address>
-          <div class="social-row">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        <form class="contact-form reveal reveal-delay-2" id="contact-form" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="f-name">Nume</label>
-              <input type="text" id="f-name" name="name" placeholder="Numele tău" required>
-            </div>
-            <div class="form-group">
-              <label for="f-email">Email</label>
-              <input type="email" id="f-email" name="email" placeholder="email@exemplu.ro" required>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="f-subject">Subiect</label>
-            <select id="f-subject" name="subject">
-              <option value="">Alege un subiect</option>
-              <option value="voluntar">Vreau să fiu voluntar</option>
-              <option value="proiect">Susțin un proiect cultural</option>
-              <option value="partener">Devin partener</option>
-              <option value="donatie">Donez</option>
-              <option value="colaborare">Propun o colaborare artistică</option>
-              <option value="altele">Altele</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f-msg">Mesaj</label>
-            <textarea id="f-msg" name="message" rows="5" placeholder="Spune-ne ce gândești..." required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            Trimite mesajul <i class="fas fa-paper-plane"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <!-- ============================================================
-       FOOTER
-  ============================================================ -->
-  <footer id="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#hero" class="nav-logo">
-            <span class="logo-main">ALTER</span><span class="logo-gold">SPERO</span>
-          </a>
-          <p>Susținem tinerii artiști și proiectele culturale care transformă creativitatea în impact social. Pentru noi, cultura nu este un privilegiu — este o resursă esențială pentru o societate sănătoasă.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Navigare</h4>
-          <ul>
-            <li><a href="#despre">Cine suntem</a></li>
-            <li><a href="#misiune">Misiune & Viziune</a></li>
-            <li><a href="#directii">Direcții culturale</a></li>
-            <li><a href="#initiative">Inițiative viitoare</a></li>
-            <li><a href="#sustine">Susține-ne</a></li>
-            <li><a href="#jurnal">Jurnal cultural</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Implică-te</h4>
-          <ul>
-            <li><a href="#sustine">Devino voluntar</a></li>
-            <li><a href="#sustine">Susține un proiect</a></li>
-            <li><a href="#sustine">Devino partener</a></li>
-            <li><a href="#sustine">Donează</a></li>
-            <li><a href="#contact">Propune o colaborare</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Urmărește-ne</h4>
-          <div class="social-row" style="margin-top:0.25rem">
-            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          </div>
-          <p class="footer-tagline">„Arta are puterea de a conecta oameni."</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Alter Spero. Toate drepturile rezervate.</p>
-        <p>Construit cu <i class="fas fa-heart" style="color:var(--gold)"></i> pentru cultură și comunitate.</p>
-      </div>
-    </div>
-  </footer>
+Educație prin artă
+Dezvoltarea de activități educaționale și creative pentru copii și tineri, astfel încât creativitatea să întâlnească comunitatea.
+„Creativitate întâlnește comunitate."
 
-  <script src="script.js"></script>
-</body>
-</html>
+
+Colaborări interdisciplinare
+Crearea de parteneriate între artiști, organizații culturale și comunități locale pentru proiecte transformatoare.
+„Împreună creăm mai mult."
+04
+Inițiative viitoare
+Proiecte în pregătire
+
+
+
+Seri de muzică live
+Seri dedicate artiștilor independenți, într-un spațiu care pune muzica pe primul loc.
+
+
+Expoziții colective
+Expoziții pentru tineri pictori și sculptori — un prim spațiu de vizibilitate reală.
+
+
+Ateliere creative
+Ateliere pentru copii și adolescenți care vor să descopere lumea artei.
+
+
+Evenimente în spații alternative
+Cultură în spații neconvenționale din București — arta nu are nevoie de frontiere.
+
+
+Campanii de artă urbană
+Mesaje sociale prin artă stradală — transformând spațiul public în galerie comunitară.
+
+
+Rezidențe artistice
+Spații de creație și colaborare interdisciplinară pentru artiști din toate domeniile.
+05
+Susțineți și voi inițiativele noastre
+
+Proiectele culturale independente au nevoie nu doar de vizibilitate, ci și de susținere reală pentru a putea crește. Prin contribuția ta, putem dezvolta inițiative dedicate tinerilor artiști și proiecte creative cu impact social.
+
+Devino voluntar
+Alătură-te echipei și contribuie cu timpul și energia ta la proiectele noastre culturale.
+Vreau să mă implic
+
+Susține un proiect
+Finanțează direct un proiect cultural și ajută un tânăr artist să-și realizeze visul.
+Alege un proiect
+
+Devino partener
+Organizații, companii și instituții care împărtășesc valorile noastre sunt binevenite.
+Hai să colaborăm
+
+Donează
+Orice contribuție, oricât de mică, ajută la construirea unui spațiu cultural mai bun.
+Donează acum
+
+Propune o colaborare
+Ai un proiect artistic? Vrei să colaborezi? Suntem deschiși la orice idee creativă.
+Propune ideea ta
+06
+Jurnal cultural
+
+Articole
+Reflecții
+Interviuri
+Recomandări
+Perspective
+
+Articole  ·  Iunie 2026  ·  4 min citire
+Jucarii din Antichitate: copilaria la malul Marii Negre
+Arheologii au scos la lumina jucarii romane din vechea cetate Tomis. O expozitie itineranta le aduce acum mai aproape de noi.
+Citeste integral
+Exista ceva profund emotionant in ideea ca, acum doua mii de ani, un copil se juca pe strazile cetatii Tomis cu un calusel pe rotite. Acelasi zambet, aceeasi bucurie, aceeasi nevoie de joaca pe care o recunoastem si astazi in ochii copiilor nostri.
+Zornaitoare, figurine de animale, soldatei si calusei pe rotite - acestea sunt jucarii pastrate cu grija in incinta Muzeului National de Istorie si Arheologie Constanta. Nu sunt monumente impunatoare, nu sunt comori de aur sau inscriptii grandioase. Sunt obiecte mici, fragile, facute pentru maini mici.
+Aceste obiecte vor pleca acum intr-un turneu itinerant prin tara, iar prima oprire va fi la Iasi, incepand din 19 iunie. Este o ocazie rara si valoroasa, mai ales pentru cei mici de astazi, care pot vedea astfel ca joaca este un limbaj universal.
+Sursa: articol original
+
+Articole  ·  Iunie 2026  ·  4 min citire
+Ia romaneasca, intre traditie si arta: o expozitie de neuitat la MNAR
+Muzeul National de Arta al Romaniei gazduieste cea mai spectaculoasa expozitie dedicata iei romanesti. O invitatie la redescoperirea identitatii noastre culturale.
+Citeste integral
+Ia nu este doar o camasa. Este un document viu, tesut cu rabdare si dragoste de-a lungul generatiilor. Fiecare motiv brodat poarta o poveste, un sat, o familie, o credinta. Iar aceasta expozitie reuseste ceva rar: sa transforme un obiect familiar intr-o experienta profunda.
+La Alter Spero credem ca tocmai astfel de initiative construiesc puntile dintre trecut si prezent, dintre comunitate si individ. Arta populara romaneasca nu este un muzeu al trecutului, ci o sursa vie de inspiratie pentru cei care vor sa inteleaga cine sunt si de unde vin.
+
+Articole  ·  Iunie 2026  ·  4 min citire
+Mastile africane povestesc la Cluj: o calatorie intre doua lumi
+Muzeul Etnografic al Transilvaniei gazduieste cea mai mare colectie de masti africane din Romania. O expozitie care merita vazuta.
+Citeste integral
+Mastile nu sunt simple obiecte decorative. In culturile africane, ele reprezinta punti intre lumea celor vii si cea a stramosilor, instrumente rituale incarcate de sens, de rugaciune si de memorie colectiva.
+Cultura nu are granite. Uneori are nevoie doar de un muzeu curajos si de o sala bine iluminata ca sa ne aminteasca asta.
+
+Articole  ·  Iunie 2026  ·  4 min citire
+Artistul roman din umbra Game of Thrones, recompensat cu un premiu Emmy
+Un artist roman a contribuit la universul Game of Thrones si a fost recompensat cu un premiu Emmy. O poveste despre talent si recunoastere internationala.
+Citeste integral
+Exista oameni care construiesc lumi intregi fara ca numele lor sa apara pe afis. Oameni care lucreaza in spatele camerei si al caror talent ajunge sa fie vazut de sute de milioane de oameni fara ca ei sa fie recunoscuti pe strada.
+Un premiu Emmy nu este o intamplare. Este rezultatul unor ani de dedicare, al unor nopti petrecute in ateliere si studiouri. La Alter Spero credem ca astfel de povesti merita spuse si auzite — pot deveni surse de inspiratie pentru tinerii artisti din Romania.
+07
+Contact
+
+Hai să construim ceva împreună
+Fie că vrei să te implici ca voluntar, să propui o colaborare artistică sau pur și simplu să afli mai multe despre proiectele noastre — suntem bucuroși să te ascultăm.
+
+contact@alterspero.ro
+
++40 731 045 667
+
+București, România
+
+
+
+
+NUME
+
+EMAIL
+
+SUBIECT
+              Alege un subiect
+              Vreau să fiu voluntar
+              Susțin un proiect cultural
+              Devin partener
+              Donez
+              Propun o colaborare artistică
+              Altele
+            
+MESAJ
+Trimite mesajul
+
+ALTERSPERO
+Susținem tinerii artiști și proiectele culturale care transformă creativitatea în impact social. Pentru noi, cultura nu este un privilegiu — este o resursă esențială pentru o societate sănătoasă.
+NAVIGARE
+	•	Cine suntem
+	•	Misiune & Viziune
+	•	Direcții culturale
+	•	Inițiative viitoare
+	•	Susține-ne
+	•	Jurnal cultural
+IMPLICĂ-TE
+	•	Devino voluntar
+	•	Susține un proiect
+	•	Devino partener
+	•	Donează
+	•	Propune o colaborare
+URMĂREȘTE-NE
+
+
+
+
+„Arta are puterea de a conecta oameni."
+© 2025 Alter Spero. Toate drepturile rezervate.
+Construit cu pentru cultură și comunitate.
