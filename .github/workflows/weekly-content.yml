@@ -33,11 +33,12 @@ jobs:
         run: python scripts/generate_article.py
 
       - name: Commit and push
+        - name: Commit and push
         run: |
           git config user.name "AlterSpero Bot"
           git config user.email "bot@alterspero.ro"
           git fetch origin main
-          git reset --soft origin/main
+          git checkout main
           git add index.html scripts/articles_log.json
           git commit -m "articol saptamanal $(date '+%Y-%m-%d')" || echo "Nimic de commit"
           git push origin main
